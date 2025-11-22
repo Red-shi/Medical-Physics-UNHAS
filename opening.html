@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Physics - Physics MIPA Unhas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* === CSS RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* === COLOR & FONT VARIABLES === */
+        :root {
+            --primary-color: #A00000; /* Unhas Red */
+            --secondary-color: #f4f4f4;
+            --dark-color: #333;
+            --light-color: #fff;
+            --font-family: 'Poppins', 'Arial', sans-serif;
+            --container-width: 1100px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --border-radius: 8px;
+        }
+
+        /* === GLOBAL STYLES === */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; color: var(--primary-color); }
+        h3 { font-size: 1.4rem; }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* === HEADER & NAVIGATION === */
+        .navbar {
+            background-color: var(--light-color);
+            border-bottom: 2px solid var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 25px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hamburger Button (Mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--dark-color);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1920x1080?physics,medical,technology') no-repeat center center/cover;
+            color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px; /* Modern pill shape */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #800000; /* Darker red */
+            transform: translateY(-3px);
+        }
+
+        /* === SECTION: OUR FOCUS === */
+        #fokus {
+            background-color: var(--secondary-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .fokus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .fokus-card {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .fokus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fokus-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .fokus-card h3 {
+            color: var(--primary-color);
+        }
+
+        /* === SECTION: LECTURERS (DOSEN) === */
+        #lecturers {
+            background-color: var(--light-color);
+        }
+
+        .lecturers-grid {
+            display: grid;
+            /* 3 kolom pada desktop */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .lecturer-card {
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 150px;
+        }
+        
+        .lecturer-card:hover {
+            transform: scale(1.03);
+            background-color: #f0f0f0;
+        }
+
+        .lecturer-card h3 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .lecturer-card p {
+            font-size: 0.95rem;
+            color: #555;
+            font-weight: 400;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background-color: var(--dark-color);
+            color: #ccc;
+            padding: 60px 0 30px 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            color: var(--light-color);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col ul a:hover {
+            color: var(--light-color);
+        }
+        
+        .social-links a {
+            color: #ccc;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+        
+        /* === MEDIA QUERY (RESPONSIVE) === */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            
+            /* Mobile Navigation */
+            .navbar .nav-links {
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 70px; 
+                left: 0;
+                background-color: var(--light-color);
+                width: 100%;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            /* Show when 'active' (via JS) */
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            
+            .navbar .nav-links li {
+                margin: 0;
+                text-align: center;
+            }
+            
+            .navbar .nav-links a {
+                padding: 15px;
+                display: block;
+                border-bottom: 1px solid var(--secondary-color);
+            }
+            
+            .hamburger {
+                display: block; 
+            }
+            
+            /* Grid Layouts (stacking) */
+            .fokus-grid,
+            .footer-grid,
+            .lecturers-grid {
+                grid-template-columns: 1fr;
+                /* Pada mobile, tampilkan Lecturers 2 kolom agar tidak terlalu panjang ke bawah */
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            
+            /* Pada layar sangat kecil, Lecturers hanya 1 kolom */
+            @media (max-width: 480px) {
+                .lecturers-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MedPhys Unhas</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#fokus">About</a></li>
+                <li><a href="#lecturers">Lecturers</a></li> 
+                <li><a href="#kontak">Contact</a></li>
+                <li><a href="subject/home.html">Subject</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Bridging Physics and Medicine</h1>
+                <p>The Medical Physics Portal of the Physics Department, MIPA Faculty, Hasanuddin University. A center for information, alumni networking, and contemporary research development.</p>
+                <a href="#fokus" class="btn">Explore More</a>
+            </div>
+        </section>
+
+        <section id="fokus">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Areas of Focus</h2>
+                    <p>Dedicating the science of physics to advance healthcare services.</p>
+                </div>
+                
+                <div class="fokus-grid">
+                    <div class="fokus-card">
+                        <i class="fas fa-radiation-alt"></i>
+                        <h3>Radiotherapy</h3>
+                        <p>The application of physics in the planning and delivery of radiation for precise and safe cancer therapy.</p>
+                    </div>
+                    <div class="fokus-card">
+                        <i class="fas fa-x-ray"></i>
+                        <h3>Radiodiagnostics</h3>
+                        <p>Optimization and quality assurance in medical imaging modalities such as CT Scan, MRI, and X-ray.</p>
+                    </div>
+                    <div class="fokus-card">
+                        <i class="fas fa-atom"></i>
+                        <h3>Nuclear Medicine</h3>
+                        <p>Utilization of radioisotopes for functional body diagnosis and internal therapy (theranostics).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lecturers">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Medical Physics Lecturers</h2>
+                    <p>Experts dedicated to teaching, research, and professional development in the field.</p>
+                </div>
+                
+                <div class="lecturers-grid">
+                    <div class="lecturer-card">
+                        <h3>Prof. Dr. Syamsir Dewang, M.Eng.Sc., F.med</h3>
+                        <p>Professor/IV.d</p>
+                        <p>dewang1163@gmail.com</p>
+                    </div>
+                    <div class="lecturer-card">
+                        <h3>Bannu, S.Si., M.Si.</h3>
+                        <p>Lector/III.d</p>
+                        <p>bannu251973@gmail.com</p>
+                    </div>
+                    <div class="lecturer-card">
+                        <h3>Dr. Sri Dewi Astuty, S.Si., M.Si.</h3>
+                        <p>Lector/III.d</p>
+                        <p>tuty13051975@gmail.com</p>
+                    </div>
+                    <div class="lecturer-card">
+                        <h3>Ajeng Anggereny I, S.Pd., M.Si.</h3>
+                        <p>Assistant/III.b</p>
+                        <p>ajengibrahim@unhas.ac.id</p>
+                    </div>
+                    <div class="lecturer-card">
+                        <h3>Ayu Hardianti Pratiwi, S.Pd. M.Si.</h3>
+                        <p>Assistant/III.b</p>
+                        <p>ayuhardiantip@unhas.ac.id</p>
+                    </div>
+                    <div class="lecturer-card">
+                        <h3>Arfinna, F.med</h3>
+                        <p>Lecturer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+
+    <footer id="kontak">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Physics Department, Faculty of MIPA<br>
+                    Hasanuddin University<br>
+                    Jl. Perintis Kemerdekaan KM.10, Tamalanrea, Makassar, 90245</p>
+                    <p><strong>Email:</strong> physics@mipa.unhas.ac.id</p>
+                    <p><strong>Phone:</strong> (0411) 58XXXX</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Related Links</h4>
+                    <ul>
+                        <li><a href="https://unhas.ac.id">Hasanuddin University</a></li>
+                        <li><a href="https://mipa.unhas.ac.id">MIPA Faculty Unhas</a></li>
+                        <li><a href="https://physics.unhas.ac.id">Physics Department Unhas</a></li>
+                        <li><a href="#">Academic System (NEO)</a></li>
+                        <li><a href="#">Unhas Repository</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <p>Get the latest info from us:</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Unhas Medical Physics Community. Designed with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Toggle hamburger icon (optional, change to 'x')
+            const icon = hamburger.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
