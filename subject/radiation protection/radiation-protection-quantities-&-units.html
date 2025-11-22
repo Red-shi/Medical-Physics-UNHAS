@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiation Protection Quantities and Units (English)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #5d4037; /* Brown color for Formal/Measurement */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #3e2723;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #efebe9;
+            border-left: 5px solid #5d4037;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #5d4037;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚖️ Radiation Protection Quantities & Units</h1>
+    <p>Measuring the physical effect and biological risk of ionizing radiation.</p>
+</header>
+
+<div class="container">
+
+    <p>In radiation protection physics, we use a hierarchy of quantities and units to measure the amount of radiation received and, critically, to assess the biological risk posed by that radiation. These quantities enforce the Dose Limitation and ALARA principles recommended by the ICRP (International Commission on Radiological Protection).</p>
+
+    <hr>
+
+    <h2>1. Basic Physical Quantities (Energy Deposition)</h2>
+
+    <h3>Absorbed Dose (D)</h3>
+    <div class="key-concept">
+        <p><strong>Definition:</strong> The mean energy absorbed per unit mass of matter. It is the fundamental quantity measured in clinical dosimetry.</p>
+        <p><strong>SI Unit:</strong> Gray (Gy)</p>
+        <div class="formula">
+            1 Gy = 1 Joule/kg
+        </div>
+        <p><strong>Application:</strong> Used to measure the dose delivered to a tumor in radiotherapy and the physical dose at any point in tissue or material. Gray is a purely physical quantity; it does not account for biological effects.</p>
+    </div>
+
+    <h3>Kerma (K)</h3>
+    <ul>
+        <li><b>Definition:</b> Kinetic Energy Released in MAtter. It is the initial kinetic energy of charged particles (electrons) released by neutral radiation (photons/neutrons) per unit mass of the medium.</li>
+        <li><b>SI Unit:</b> Gray (Gy).</li>
+        <li><b>Relationship to Absorbed Dose:</b> In high-energy photon beams, Kerma is maximum at the surface, while Absorbed Dose is maximum at depth (D<sub>max</sub>) due to the build-up process.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Weighted Biological Quantities (Risk Assessment)</h2>
+    <p>These quantities introduce weighting factors to reflect the different biological harm caused by various radiation types and tissue sensitivities.</p>
+
+    <h3>Equivalent Dose (H <sub>T</sub>)</h3>
+    <p>Equivalent Dose accounts for the fact that different types of radiation (photons, protons, neutrons) cause different levels of biological damage for the same absorbed dose. </p>
+    <ul>
+        <li><strong>Definition:</strong> The absorbed dose in an organ or tissue (D<sub>T,R</sub>) multiplied by the Radiation Weighting Factor (W <sub>R</sub>) for that type of radiation.</li>
+        <li><strong>SI Unit:</strong> Sievert (Sv)</li>
+        <div class="formula">
+            H<sub>T</sub> = &Sigma;<sub>R</sub> W<sub>R</sub> &middot; D<sub>T,R</sub>
+        </div>
+        <li><strong>Radiation Weighting Factor (W <sub>R</sub>):</strong> A unitless value set by the ICRP. Examples: W <sub>R</sub> = 1$ for photons and electrons; W <sub>R</sub> = 5 to 20 for neutrons, reflecting their higher biological risk (higher LET).</li>
+    </ul>
+
+    <h3>Effective Dose (E)</h3>
+    <p>Effective Dose assesses the stochastic risk (e.g., cancer) to the entire body by accounting for the varying radiation sensitivity of different organs.</p>
+    <ul>
+        <li><strong>Definition:</strong> The sum of the Equivalent Dose in each organ (H<sub>T</sub>) multiplied by the Tissue Weighting Factor (W <sub>T</sub>) for that organ.</li>
+        <li><strong>SI Unit:</strong> Sievert (Sv)</li>
+        <div class="formula">
+            E = &Sigma;<sub>T</sub> W<sub>T</sub> &middot; H<sub>T</sub>
+        </div>
+        <li><strong>Tissue Weighting Factor (W <sub>T</sub>):</strong> A unitless value set by the ICRP. Examples: Gonads have a high W <sub>T</sub> (high hereditary risk), while skin has a very low W <sub>T</sub>.</li>
+        <li><strong>Application:</strong>This is the principal quantity used to set dose limits for radiation workers and the public.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Operational and Exposure Quantities</h2>
+
+    <h3>Exposure (X) (Traditional)</h3>
+    <ul>
+        <li><b>Definition:</b> A measure of the ability of X-rays or Gamma rays to ionize air. It is technically Air Kerma used for calibration.</li>
+        <li><b>Traditional Unit:</b> Roentgen (R). Rarely used in modern practice but foundational to older calibrations.</li>
+    </ul>
+
+    <h3>Dose Area Product (DAP)</h3>
+    <div class="key-concept">
+        <p><strong>Definition:</strong> The absorbed dose rate in a specific area multiplied by the area of the X-ray field (cm <sup>2</sup> or m <sup>2</sup>).</p>
+        <p><strong>SI Unit:</strong> <strong>Gy &middot; cm<sup>2</sup></strong></p>
+        <p><strong>Application:</strong> DAP is tracked heavily in diagnostic and interventional radiology. It is a good indicator of the patient's total energy imparted, as it is relatively independent of the distance from the source.</p>
+    </div>
+
+    <hr>
+
+    <h2>Summary of Radiation Protection Quantities</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Symbol</th>
+                <th>SI Unit</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Absorbed Dose</td>
+                <td>D</td>
+                <td>Gray (Gy)</td>
+                <td>Measures Physical Energy Absorbed.</td>
+            </tr>
+            <tr>
+                <td>Equivalent Dose</td>
+                <td>H <sub>T</sub>T</td>
+                <td>Sievert (Sv)</td>
+                <td>Adjusts D for radiation type (W <sub>R</sub>).</td>
+            </tr>
+            <tr>
+                <td>Effective Dose</td>
+                <td>E</td>
+                <td>Sievert (Sv)</td>
+                <td>Adjusts H <sub>T</sub> for organ sensitivity (W <sub>T</sub>).</td>
+            </tr>
+            <tr>
+                <td>Dose Area Product</td>
+                <td>DAP</td>
+                <td>Gy &middot; cm<sup>2</sup></td>
+                <td>Measures total energy imparted to the patient.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

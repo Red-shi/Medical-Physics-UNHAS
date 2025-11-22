@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV-Visible Spectroscopy Principles and Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #673ab7; /* Deep Purple for Light/Analytical */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #512da8;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #ede7f6;
+            border-left: 5px solid #673ab7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #673ab7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💡 UV-Visible Spectroscopy</h1>
+    <p>Quantifying matter by measuring electron transitions excited by light.</p>
+</header>
+
+<div class="container">
+
+    <p>UV-Visible (UV-Vis) Spectroscopy is an analytical technique that measures the absorption of ultraviolet (UV) or visible (Vis) light by a chemical sample. The amount of light absorbed is directly related to the concentration of the substance and its electronic structure.</p>
+    
+
+    <hr>
+
+    <h2>1. Fundamental Principles</h2>
+
+    <h3>A. Electronic Transitions</h3>
+    <ul>
+        <li class="section-item"><b>Mechanism:</b> When molecules absorb UV or visible light, the energy (E = hf) is exactly right to excite electrons from low-energy ground states to higher-energy excited states.</li>
+        <li class="section-item"><b>Chromophores:</b> Only molecules containing certain functional groups called chromophores (e.g., unsaturated bonds like C=C, C=O, or aromatic rings) can absorb light in the UV-Vis region, as these groups contain easily excitable &pi; (pi) or n (non-bonding) electrons.</li>
+        <li class="section-item"><b>Spectrum Range:</b> UV region (&asymp; 200 nm to 400 nm) and Visible region (&asymp; 400 nm to 800 nm).</li>
+    </ul>
+
+    <h3>B. The Beer-Lambert Law (Quantification)</h3>
+    <p>The core principle for quantitative analysis states that the absorbance of a solution is directly proportional to the concentration of the absorbing substance and the path length of the light through the solution.</p>
+
+    <div class="formula">
+        A = &epsilon;lc
+    </div>
+    <ul>
+        <li><b>A (Absorbance):</b> Measured amount of light absorbed (unitless).</li>
+        <li><b>&epsilon; (Molar Absorptivity):</b> A constant specific to the substance and the wavelength (units: L &middot; mol<sup>-1</sup> &middot; cm<sup>-1</sup>). It indicates how strongly a substance absorbs light.</li>
+        <li><b>l (Path Length):</b> The distance the light travels through the sample (typically 1 cm in a cuvette).</li>
+        <li><b>c (Concentration):</b> The concentration of the absorbing substance (units: mol/L).</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Instrumentation Components (The Spectrophotometer)</h2>
+    <p>A typical UV-Vis spectrophotometer consists of five main parts: </p>
+
+    <ul>
+        <li class="section-item"><b>1. Light Source:</b> Provides stable, continuous EM radiation across the UV-Vis range.
+            <ul>
+                <li>UV Range: Deuterium lamp (or Hydrogen lamp) is used.</li>
+                <li>Visible Range: Tungsten-Halogen lamp is used.</li>
+            </ul>
+        </li>
+        <li class="section-item"><b>2. Monochromator:</b> Separates the polychromatic (white) light from the source into individual, monochromatic (single wavelength) beams. It uses a prism or a diffraction grating.</li>
+        <li class="section-item"><b>3. Sample Holder (Cuvette):</b> A container for the solution.
+            <ul>
+                <li>Visible Range: Glass or plastic cuvettes are used.</li>
+                <li>UV Range: Quartz or fused silica cuvettes must be used, as glass and plastic absorb UV light.</li>
+            </ul>
+        </li>
+        <li class="section-item"><b>4. Detector:</b> Measures the intensity of the light transmitted through the sample (I). Common types include photomultiplier tubes (PMT) or photodiodes.</li>
+        <li class="section-item"><b>5. Readout Device:</b> Calculates the absorbance (A) based on the ratio of incident light (I<sub>0</sub>) to transmitted light (I).</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Applications in Analytical Sciences</h2>
+
+    <ul>
+        <li class="section-item"><b>Quantitative Analysis:</b> The most common use. By measuring A at a fixed &lambda; and knowing $\varepsilon$ and l, the concentration c of an unknown sample can be calculated using the Beer-Lambert Law.</li>
+        <li class="section-item"><b>Kinetic Studies:</b> Monitoring the change in concentration of a reactant or product over time to determine the rate and mechanism of a chemical reaction.</li>
+        <li class="section-item"><b>Purity Check:</b> Assessing the purity of DNA, RNA, and protein samples in biochemistry by checking the ratio of absorbance at two different wavelengths.</li>
+        <li class="section-item"><b>Colorimetric Assays:</b> Many clinical tests (e.g., measuring glucose, cholesterol, or protein concentration) rely on reagents that react with the analyte to produce a colored product, which is then quantified by UV-Vis.</li>
+    </ul>
+
+    <div class="key-concept">
+        <h3>Qualitative vs. Quantitative</h3>
+        <p>While UV-Vis is excellent for quantitative analysis, it is generally poor for qualitative analysis (identifying an unknown substance) because the spectra are usually broad and lack the detail needed for definitive identification compared to techniques like IR or NMR.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radiation Protection - Medical Physicist</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:0;background:#f6f8fa;color:#0f172a}
+    header{background:#0b6d8a;color:#fff;padding:20px}
+    nav a{color:#fff;margin-right:15px;text-decoration:none}
+    .container{max-width:1000px;margin:20px auto;padding:0 15px}
+    .article{background:#fff;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+    .article h2{margin:0}
+    .article p{color:#555}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Radiation Protection</h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="radiation protection/history-of-protection-radiation.html">History of Protection Radiation</a>
+    <a href="radiation protection/fundamental-of-imaging-physics.html">Fundamenatal of Imaging Physics</a>
+    <a href="radiation protection/direct-&-indirect-ionization.html">Direct & Indirect Ionization</a>
+    <a href="radiation protection/basic-principle-of-radiation-protection.html">Basic Principle of Radiation Protection</a>
+    <a href="radiation protection/radiation-protection-quantities-&-units.html">Radiation Protection Quantities & Units</a>
+    <a href="radiation protection/radiation-exposure.html">Radiation Exposure</a>
+    <a href="radiation protection/imaging-room.html">Imaging Room</a>
+  </nav>
+</header>
+<div class="container">
+
+    <p>Radiation Protection (Health Physics) is the multidisciplinary practice aimed at protecting humans and the environment from the harmful effects of ionizing radiation. Its framework is based on the recommendations of the International Commission on Radiological Protection (ICRP).</p>
+
+    <hr>
+
+    <h2>1. Biological Effects and the Goal of Protection</h2>
+
+    <h3>Classification of Biological Effects</h3>
+    <ul>
+        <li><strong>Deterministic Effects (Tissue Reactions):</strong>
+            <ul>
+                <li>Definition: Effects that occur only above a certain dose threshold. Severity increases with dose.</li>
+                <li>Examples: Skin erythema, cataract formation, organ failure.</li>
+                <li>Protection Goal: Total prevention of these effects by keeping doses below the relevant threshold.</li>
+            </ul>
+        </li>
+        <li><strong>Stochastic Effects:</strong>
+            <ul>
+                <li>Definition: Effects for which the probability of occurrence increases with dose, but severity is independent of dose. No known dose threshold is assumed.</li>
+                <li>Examples: Cancer (malignancy induction), hereditary/genetic effects.</li>
+                <li>Protection Goal: Risk reduction (probability) to levels that are acceptable.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>2. The Three Fundamental ICRP Principles</h2>
+    <p>Every practice or decision involving radiation exposure must satisfy these three foundational principles:</p>
+    
+
+    <div class="key-concept">
+        <ol class="method-list">
+            <li><strong>Justification:</strong> <br> Any use of radiation must yield a positive net benefit. The expected benefits must outweigh the potential radiation detriment.</li>
+            <li><strong>Optimization (ALARA):</strong> <br> Radiation exposures should be kept As Low As Reasonably Achievable (ALARA), taking into account economic and social factors. </li>
+            <li><strong>Dose Limitation:</strong> <br> The individual dose from planned exposures must not exceed the dose limits set by the regulatory authority (applies only to occupationally exposed workers and the public, not to medical patients).</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <h2>3. Operational Methods of Radiation Protection</h2>
+    <p>The $\text{ALARA}$ principle is implemented through physical controls over the three main variables for external exposure:</p>
+
+    <ul class="method-list">
+        <li><h3>🕒 Time</h3>
+            <p>The total dose received (D) is directly proportional to the exposure time (t).</p>
+            <p>Method: Minimize the duration spent near the radiation source. Using techniques like pulsed fluoroscopy or Last Image Hold in interventions to reduce beam-on time.</p>
+            <p class="formula">
+                D &prop; t
+            </p>
+        </li>
+        <li><h3>📏 Distance</h3>
+            <p>The radiation intensity (I) from a point source decreases proportional to the square of the distance (d) from the source (Inverse Square Law):</p>
+            <p>Method: Maintain the maximum feasible distance from the radiation source. This is the single most effective way to reduce dose. </p>
+            <p class="formula">
+                I &prop; 1/d<sup>2</sup>
+            </p>
+        </li>
+        <li><h3>🧱 Shielding</h3>
+            <p>An attenuating barrier material is placed between the source and the individual to weaken the radiation intensity.</p>
+            <p>Method: Shielding thickness is calculated based on the Half-Value Layer (HVL) or Tenth-Value Layer (TVL) of a specific material (e.g., Lead for diagnostic X-rays, Concrete for Megavoltage photons). Shielding can be structural (walls) or personal protective equipment (lead aprons, lead glasses).</p>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Principal Radiation Protection Quantities</h2>
+    <p>The measurement of biological risk is performed using dose quantities that incorporate weighting factors:</p>
+    
+    <div class="key-concept">
+        <h3>Equivalent Dose (H<sub>T</sub>)</h3>
+        <p>Measures the absorbed dose (D) corrected for the type of radiation (using the Radiation Weighting Factor, W<sub>R</sub>) to reflect the difference in biological damage:</p>
+        <p class="formula">
+            H<sub>T</sub> = W<sub>R</sub> &middot; D
+        </p>
+        <p>Unit: Sievert (Sv). Used to compare the relative hazard of, for instance, neutrons versus photons.</p>
+    </div>
+
+    <div class="key-concept">
+        <h3>Effective Dose (E)</h3>
+        <p>Measures the overall risk to the entire body by correcting H<sub>T</sub> for the varying radiation sensitivity of different organs and tissues (using the Tissue Weighting Factor, W<sub>T</sub>):</p>
+        <p class="formula">
+            E = &Sigma;<sub>T</sub> W<sub>T</sub> &middot; H<sub>T</sub>
+        </p>
+        <p>Unit: Sievert (Sv). This is the primary quantity used to compare risks across different procedures and to control cumulative occupational exposure. </p>
+    </div>
+
+</div>
+</body>
+</html>

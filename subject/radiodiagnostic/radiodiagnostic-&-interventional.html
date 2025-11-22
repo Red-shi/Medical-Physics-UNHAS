@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiodiagnostic and Interventional Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff9800; /* Amber color for Diagnostics */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #fb8c00;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #5c6bc0;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🩺 Radiodiagnostic & Interventional Physics</h1>
+    <p>Utilizing imaging physics for diagnosis, guidance, and minimal invasive therapy.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>Radiodiagnostic Physics</strong> encompasses the principles and technologies used to acquire and optimize medical images for diagnostic purposes (e.g., X-ray, CT, MRI). Interventional Radiology (IR) takes this a step further, using real-time diagnostic imaging (primarily Fluoroscopy and CT) to guide minimally invasive procedures to treat diseases within the body.</p>
+
+    <hr>
+
+    <h2>1. The Physics Core: Fluoroscopy and Real-Time Imaging</h2>
+    <p>Interventional procedures rely heavily on the ability to view anatomical structures and instruments in real time.</p>
+
+    <h3>Fluoroscopy (Dynamic X-ray)</h3>
+    <ul>
+        <li><b>Principle:</b> Uses a continuous or pulsed X-ray beam to create a dynamic sequence of images. Unlike static radiography, it allows the physician to see movement (e.g., blood flow, catheter insertion).</li>
+        <li><b>Image Intensifier (II) or Flat Panel Detector (FPD):</b> Converts the transmitted X-ray pattern into a visible image. Modern systems favor high-sensitivity FPDs for better image quality and lower dose requirements.</li>
+        <li><b>Dose Rate Management:</b> Because fluoroscopy is continuous, the potential for high patient and staff radiation dose is significant. Systems utilize:
+            <ul>
+                <li>Pulsed Fluoroscopy: Reducing the number of images per second (frames per second, fps) to lower dose.</li>
+                <li>Last Image Hold (LIH): Freezing the last acquired image to reduce live beam time.</li>
+                <li>Dose Rate Limiting: Physical limits on the dose output of the X-ray tube.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="key-concept">
+        <p><strong>Digital Subtraction Angiography (DSA):</strong> A specialized fluoroscopic technique used for vascular interventions. It involves acquiring a mask image (before contrast injection) and then digitally subtracting it from subsequent images (after contrast injection). This eliminates stationary background structures (like bone) to clearly visualize only the flowing contrast medium.</p>
+    </div>
+
+    <hr>
+
+    <h2>2. Physics in Diagnostic Quality and Optimization</h2>
+    <p>Physics dictates the quality of the image and the patient safety required for accurate diagnosis.</p>
+
+    <h3>Image Quality Metrics</h3>
+    <ul>
+        <li><b>Contrast Resolution:</b> The ability to distinguish tissues with small differences in physical properties (e.g., soft tissues in CT or MRI). Highly dependent on image noise (SNR).</li>
+        <li><b>Spatial Resolution:</b> The ability to distinguish fine anatomical detail. In CT, this is affected by the size of the detector element and the reconstruction filter (kernel) used.</li>
+        <li><b>Temporal Resolution:</b> The speed at which an image can be acquired, critical for reducing motion artifacts (e.g., heart motion in cardiac CT). Achieved by increasing gantry rotation speed or using multi-source CT scanners.</li>
+    </ul>
+
+    <h3>Optimization (The ALARA Principle)</h3>
+    <ul>
+        <li><strong>ALARA (As Low As Reasonably Achievable):</strong> The guiding principle for radiation protection in diagnostics. The physicist's role is to ensure image quality is sufficient for diagnosis while minimizing radiation dose.</li>
+        <li><b>Automatic Exposure Control (AEC):</b> An electronic circuit that monitors the radiation reaching the detector and automatically terminates the exposure once the required signal level is achieved, standardizing image quality and preventing overexposure.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Interventional Procedures and Dose Management</h2>
+    <p>IR procedures often involve extended fluoroscopy times and complex geometries, demanding meticulous radiation safety protocols.</p>
+
+    <h3>Common Interventional Physics Issues</h3>
+    <ul>
+        <li><b>Dose Tracking:</b> Procedures like complex endovascular repair can lead to very high localized skin doses, potentially causing Deterministic Effects (e.g., skin injury). IR suites use real-time dose area product (DAP) meters and cumulative dose trackers to monitor skin dose.</li>
+        <li><b>Shielding and Protection:</b> Because the X-ray tube is often under the patient and the beam scatters upwards, scatter radiation to staff is high. Physics ensures the proper use of lead aprons, thyroid shields, ceiling shields, and protective curtains.</li>
+        <li><b>Magnification and Collimation:</b> While magnification improves visualization, it increases dose. Proper collimation is always emphasized to limit the X-ray field size and reduce scatter.</li>
+    </ul>
+
+    <h3>Interventional Modalities</h3>
+    <ul>
+        <li><b>CT Fluoroscopy:</b> Real-time CT imaging used to guide biopsies, drain placements, and ablations, especially in soft tissue that is poorly visible under standard X-ray.</li>
+        <li><b>MRI Guidance:</b> Emerging technique for interventional procedures, offering superior soft tissue contrast without ionizing radiation, but challenged by slow imaging speed and the need for MRI-compatible tools.</li>
+    </ul>
+
+    <p class="key-concept"><strong>Role of the Physicist:</strong> The medical physicist is responsible for the technical specification, acceptance testing, quality control (QC), and radiation safety training for all diagnostic and interventional imaging equipment.</p>
+
+</div>
+
+</body>
+</html>

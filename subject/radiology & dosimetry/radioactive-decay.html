@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principles of Radioactive Decay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #795548; /* Brown for Nuclear/Decay */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #5d4037;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #00bcd4;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #efebe9;
+            border-left: 5px solid #795548;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #795548;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>☢️ Principles of Radioactive Decay</h1>
+    <p>The spontaneous transformation of unstable atomic nuclei.</p>
+</header>
+
+<div class="container">
+
+    <p>Radioactive decay is the process by which an unstable atomic nucleus (a radionuclide) spontaneously loses energy by radiation. This process is random, independent of external physical or chemical conditions, and results in the transformation of the parent nucleus into a different nucleus (the daughter nuclide), often leading to a more stable state.</p>
+
+    <hr>
+
+    <h2>1. Types of Decay and Emitted Particles</h2>
+
+    <p>Decay modes involve changes in the number of protons (Z) or neutrons (N), or the energy state of the nucleus.</p>
+
+    <h3>A. Alpha (&alpha;) Decay</h3>
+    <ul>
+        <li class="section-item"><b>Mechanism:</b> The nucleus emits an alpha particle (a helium nucleus, He <sup>2+</sup>), consisting of 2 protons and 2 neutrons.</li>
+        <li class="section-item"><b>Change:</b> Atomic number (Z) decreases by 2, and Mass number (A) decreases by 4.</li>
+        <li class="section-item"><b>Relevance:</b> Typically occurs in very heavy nuclei (e.g., Uranium, Radium) to reduce mass and achieve stability.</li>
+    </ul>
+
+    <h3>B. Beta (&beta;) Decay</h3>
+    <ul>
+        <li class="section-item"><b>Beta Minus (&beta;<sup>-</sup>):</b> A neutron is converted into a proton, an electron (&beta;<sup>-</sup> particle), and an electron antineutrino (&nu;&#772;<sub>e</sub>). Occurs in nuclei with an excess of neutrons.
+            <ul>
+                <li><b>Change:</b> Z increases by 1, A remains unchanged. (e.g., Iodine-131 to Xenon-131)</li>
+            </ul>
+        </li>
+        <li class="section-item"><b>Beta Plus (&beta; <sup>+</sup>) / Positron Emission:</b> A proton is converted into a neutron, a positron (&beta;<sup>+</sup> particle), and an electron neutrino (&nu;<sub>e</sub>). Occurs in nuclei with an excess of protons.
+            <ul>
+                <li><b>Change:</b> Z decreases by 1, A remains unchanged. (e.g., Fluorine-18)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>C. Gamma (&gamma;) Decay (Isomeric Transition)</h3>
+    <ul>
+        <li class="section-item"><b>Mechanism:</b> Occurs when a nucleus is left in an excited state (metastable state) after a prior decay (e.g., &alpha; or &beta; decay). The nucleus relaxes to its ground state by emitting a high-energy photon (&gamma; ray).</li>
+        <li class="section-item"><b>Change:</b> No change in Z or A. Only energy is released. (e.g., Technetium-99m to Technetium-99)</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. The Law of Radioactive Decay</h2>
+
+    <p>Radioactive decay follows first-order kinetics, meaning the rate of decay (Activity, A) is directly proportional to the number of radioactive nuclei (N) present.</p>
+
+    <h3>A. Decay Constant and Activity</h3>
+    <ul>
+        <li class="section-item"><b>Decay Constant (&lambda;):</b> The probability per unit time that a nucleus will decay. &lambda; is unique for every radionuclide.</li>
+        <li class="section-item"><b>Activity (A):</b> The rate of decay, measured in Becquerels (q) or Curies (Ci).
+            <div class="formula">
+                 A = &lambda; N
+            </div>
+        </li>
+    </ul>
+
+    <h3>B. Exponential Decay Equation</h3>
+    <p>The number of remaining nuclei (N) or the remaining activity (A) after a time (t) decreases exponentially from the initial value (N<sub>0</sub> or A<sub>0</sub>).</p>
+    <div class="formula">
+        A(t) = A<sub>0</sub> e<sup>-&lambda;t</sup> atau N(t) = N<sub>0</sub> e<sup>-&lambda;t</sup>
+    </div>
+
+    <hr>
+
+    <h2>3. Half-Life (<strong>T</strong><sub>1/2</sub>)</h2>
+
+    <p>The half-life is the most common parameter used to describe the decay rate of a radionuclide. It is a defining characteristic of the isotope.</p>
+
+    <div class="key-concept">
+        <h3>Definition of Half-Life (<strong>T</strong><sub>1/2</sub>)</h3>
+        <p>The time required for the number of radioactive nuclei (or the activity) to decrease to one-half of its initial value. Half-life is inversely proportional to the decay constant (&lambda;).</p>
+        <div class="formula">
+            T<sub>1/2</sub> = ln(2) / &lambda; &approx; 0.693 / &lambda;
+        </div>
+        <p>Example: If a substance has a half-life of 6 hours, its activity will drop to 50% after 6 hours, 25% after 12 hours, 12.5% after 18 hours, and so on.
+
+
+    </div>
+
+    <hr>
+
+    <h2>4. Biological Half-Life and Effective Half-Life</h2>
+
+    <p>In Nuclear Medicine, the physical half-life alone is insufficient to describe the clearance of a radiopharmaceutical from the body.</p>
+    <ul>
+        <li class="section-item"><b>Physical Half-Life (T<sub>p</sub>):</b> The time for the radioactivity to decay by half (as defined above).</li>
+        <li class="section-item"><b>Biological Half-Life (T<sub>b</sub>):</b> The time required for half of the administered substance to be eliminated from the body via biological processes (e.g., excretion, metabolism).</li>
+        <li class="section-item"><b>Effective Half-Life (T<sub>eff</sub>):</b> The time required for the net radioactivity in the body to decrease by half, combining both physical decay and biological elimination.
+            <div class="formula">
+                1/T<sub>eff</sub> = 1/T<sub>p</sub> + 1/T<sub>b</sub>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>

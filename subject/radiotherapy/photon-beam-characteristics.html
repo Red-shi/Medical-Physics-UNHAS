@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photon Beam Characteristics in Radiotherapy Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3f51b5; /* Indigo color for Beam Physics */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #303f9f;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ffc107;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e8eaf6;
+            border-left: 5px solid #3f51b5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #3f51b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💡 Photon Beam Characteristics in Radiotherapy Physics</h1>
+    <p>Understanding the properties of Megavoltage X-ray beams for clinical dosimetry.</p>
+</header>
+
+<div class="container">
+
+    <p>In External Beam Radiotherapy (EBRT), Megavoltage (MV) X-rays (photons) are the workhorse. The clinical use and accurate dosimetry of these beams require a thorough understanding of their physical characteristics. These characteristics are measured by medical physicists during the commissioning of a Linear Accelerator (Linac) and are essential inputs for the Treatment Planning System (TPS).</p>
+
+    <hr>
+
+    <h2>Primary Characteristics: Depth Dose Distribution</h2>
+    <p>The distribution of dose as a function of depth in the patient is the single most important characteristic of a photon beam.</p>
+
+    <h3>1. Percent Depth Dose (PDD)</h3>
+    <ul>
+        <li><strong>Definition:</strong> PDD is the ratio (expressed as a percentage) of the absorbed dose at any specific depth (<var>d</var>) to the absorbed dose at a fixed reference depth (usually the depth of maximum dose,  <b>D</b><sub>max</sub> ), along the central axis of the beam.</li>
+        <li><strong>Formula:</strong>
+            <div class="formula">
+                <b>PDD</b>(d) = (Dose at depth d) / (Dose at D<sub>max</sub>) &times; 100%
+            </div>
+        </li>
+        <li><strong>Dependence:</strong> PDD increases with increasing beam energy (higher MV), increasing field size, and increasing Source-to-Surface Distance (SSD).</li>
+    </ul>
+
+    <h3>2. Tissue Maximum Ratio (TMR) / Tissue Phantom Ratio (TPR)</h3>
+    <div class="key-concept">
+        <p>TMR (and its modern equivalent, TPR) is used for dose calculations when the machine's rotation center (Isocenter) is the reference point (Isocentric Technique).</p>
+        <p><strong>Definition:</strong> TMR is the ratio of the absorbed dose at a depth <b>d</b> in the phantom to the absorbed dose at the depth of <b>D</b><sub>max</sub>, both measured at the same distance from the source (Isocenter). Unlike PDD, TMR is essentially independent of the SSD, simplifying calculations for rotational therapy (VMAT, IMRT).</p>
+    </div>
+    
+
+    <hr>
+
+    <h2>Secondary Characteristics: Lateral Beam Properties</h2>
+    <p>The profile of the dose across the beam defines how well the beam shape conforms to the target volume.</p>
+
+    <h3>3. Beam Profile</h3>
+    <ul>
+        <li><strong>Definition: </strong> A plot of the absorbed dose across the beam, perpendicular to the central axis, at a specific depth.</li>
+        <li><strong>Regions of the Profile:</strong>
+            <ul>
+                <li>Flatness: The uniformity of the dose in the central area of the beam (typically defined within 80% of the field width). Modern Linacs use a **flattening filter** to achieve a uniform dose profile.</li>
+                <li>Symmetry: The dose distribution on one side of the central axis should mirror the other side. Asymmetry indicates a problem with the Linac's beam steering.</li>
+                <li>Penumbra: The fuzzy region at the edge of the beam where the dose drops rapidly (usually defined between the 80% and 20% isodose lines). A sharp penumbra is desirable for conformal therapy.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>4. Output Factor (Output Measurement)</h3>
+    <div class="key-concept">
+        <p>The Output Factor <b>Scp</b> is a measure of the machine's ability to deliver dose. It links the monitor units (MU) set by the TPS to the actual dose delivered to the patient.</p>
+        <p><strong>Total Output Factor</strong> is the product of two factors:</p>
+        <ol>
+            <li><strong><b>S</b><sub>c</sub> (Collimator Scatter Factor):</strong> Accounts for changes in scatter radiation produced by the machine's head (collimator and jaws) as the field size changes.</li>
+            <li><strong><b>S</b><sub>p</sub> (Phantom Scatter Factor):</strong> Accounts for changes in the dose due to scatter radiation produced within the patient/phantom as the field size changes.</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <h2>Photon Beam Quality and Energy</h2>
+
+    <p>The "quality" or effective energy of an MV beam is determined by the accelerating potential of the Linac (e.g., 6 MV, 10 MV, 18 MV) and is characterized by its ability to penetrate tissue.</p>
+    
+    <ul>
+        <li><strong>Nominal Energy:</strong> The peak energy of the electrons striking the target (e.g., 6 MeV electrons producing 6 MV X-rays).</li>
+        <li><strong>Half-Value Layer (HVL):</strong> While mainly used for low-energy X-rays, the TMR/TPR or the depth of maximum dose (D<sub>max</sub>) are more commonly used in MV radiotherapy to specify beam quality. Higher energy means deeper penetration and higher D<sub>max</sub>.</li>
+        <li><strong>Flattening Filter Free (FFF) Beams:</strong> Some modern Linacs remove the flattening filter. This results in:
+            <ul>
+                <li>Higher dose rate (faster treatment).</li>
+                <li>Conical beam profile (forward-peaked).</li>
+                <li>Reduced head scatter and softer energy spectrum.</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>

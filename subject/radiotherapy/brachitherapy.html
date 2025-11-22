@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Brachytherapy Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #9c27b0; /* Purple color for Brachytherapy */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #7b1fa2;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #4caf50;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e1f5fe;
+            border-left: 5px solid #039be5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        a {
+            color: #9c27b0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>✨ Brachytherapy Physics: The Close-Range Approach</h1>
+    <p>Delivering a high dose precisely to the tumor while sparing healthy tissue.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>Brachytherapy</strong> (from Greek 'brachy' meaning 'short distance') is a form of radiotherapy where a sealed radioactive source is placed inside or next to the area requiring treatment. It leverages the Inverse Square Law to deliver an extremely high, localized dose to the target volume, with the dose rate dropping off rapidly away from the source.</p>
+
+    <hr>
+
+    <h2>The Physical Advantage: The Dose Gradient</h2>
+    <p>Unlike External Beam Radiotherapy (EBRT) where the source is far away, brachytherapy offers a unique dose distribution that is highly beneficial for treating localized tumors.</p>
+    
+    <div class="key-concept">
+        <strong>The Inverse Square Law in Action:</strong> The dose rate (<var>D</var>) falls off according to D &prop; 1/r<sup>2</sup>, where <var>r</var> is the distance from the source. This steep gradient means tissue just a few millimeters away from the tumor receives a significantly lower dose, thus protecting critical organs at risk (OARs).
+    </div>
+
+    <ul>
+        <li><strong>High Biological Effectiveness:</strong> Due to the continuous or highly fractionated dose delivery, brachytherapy often results in a higher biological equivalent dose (BED) compared to EBRT for the same physical dose, enhancing tumor control.</li>
+        <li><strong>Reduced Treatment Time:</strong> Especially with High-Dose-Rate (HDR) techniques, the treatment can be completed in a few minutes per fraction.</li>
+        <li><strong>Conformal Dose:</strong> Sources can be placed directly within the tumor geometry, achieving excellent dose conformity.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Radioactive Sources and Dose Rates</h2>
+    <p>The choice of radioactive source depends on the treatment goal, the tumor site, and the required dose rate.</p>
+    
+    <h3>Common Isotopes Used in Brachytherapy</h3>
+    <ul>
+        <li><strong>Iridium-192 (<sup>192</sup>Ir):</strong>
+            <ul>
+                <li>Primary Use: High-Dose-Rate (HDR) brachytherapy.</li>
+                <li>Half-life (<b>T</b><sub>1/2</sub>): 73.8 days.</li>
+                <li>Energy: Emits Gamma-rays with an average energy suitable for temporary implants.</li>
+            </ul>
+        </li>
+        <li><strong>Iodine-125 (<sup>125</sup>I):</strong>
+            <ul>
+                <li>Primary Use: Low-Dose-Rate (LDR) permanent seed implants (e.g., prostate cancer).</li>
+                <li>Half-life (<b>T</b><sub>1/2</sub>): 59.4 days.</li>
+                <li>Energy: Low-energy X-rays/Gamma-rays, allowing for better shielding and highly localized treatment.</li>
+            </ul>
+        </li>
+        <li><strong>Cobalt-60 (<sup>60</sup>Co):</strong> Used less commonly in newer HDR units due to higher energy, but offers a longer half-life (5.27 years) than Ir-192.</li>
+    </ul>
+
+    <h3>Dose Rate Categories</h3>
+    <ul>
+        <li><strong>Low-Dose-Rate (LDR):</strong> Dose delivered over several days (e.g., permanent <sup>125</sup>I seeds). Dose rate: ~0.4 to 2 Gy/h.</li>
+        <li><strong>High-Dose-Rate (HDR):</strong> Dose delivered in minutes. Source is temporarily inserted and removed. Dose rate: > 12 Gy/h.</li>
+        <li><strong>Pulsed-Dose-Rate (PDR):</strong> A hybrid method simulating LDR by delivering short pulses of HDR radiation (e.g., 10 minutes every hour).</li>
+    </ul>
+
+    <hr>
+
+    <h2>Treatment Delivery Techniques</h2>
+    <p>Brachytherapy techniques are categorized by how the source is placed relative to the target:</p>
+    <ol>
+        <li><strong>Intracavitary Brachytherapy:</strong> Sources are placed within a body cavity (e.g., cervix, uterus). Applicators (like tandem and ovoids) are used to position the sources.</li>
+        <li><strong>Interstitial Brachytherapy:</strong> Sources are placed directly into the tissue of the tumor (e.g., prostate, breast). Needles or catheters guide the sources.</li>
+        <li><strong>Surface/Plaque Brachytherapy:</strong> Sources are placed on the surface of the body or a body part (e.g., eye plaques for ocular melanoma).</li>
+    </ol>
+
+    <h3>The Physics Planning Process (HDR)</h3>
+    <ol>
+        <li><strong>Imaging and Applicator Insertion:</strong> Applicators (catheters/needles) are surgically inserted, and CT/MRI images are taken to define the tumor (GTV/CTV) and OARs.</li>
+        <li><strong>Source Reconstruction:</strong> The medical physicist determines the precise 3D location of the applicators and the path the source will travel.</li>
+        <li><strong>Optimization:</strong> The physicist calculates the necessary dwell positions (where the source stops) and dwell times (how long it stays there) to achieve the prescribed dose distribution.</li>
+        <li><strong>Quality Assurance (QA):</strong> Before treatment, safety checks are performed on the source, remote afterloader unit, and treatment plan.</li>
+    </ol>
+
+    <p class="key-concept"><strong>Key Physics Challenge:</strong> Brachytherapy requires extremely accurate source position reconstruction and precise dose calculation due to the steep dose gradient. Small positioning errors can lead to significant over- or under-dosing.</p>
+
+</div>
+
+</body>
+</html>

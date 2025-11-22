@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Planning System (TPS) Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #009688; /* Teal color for Computation */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #00796b;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .step {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+        }
+        .step::before {
+            content: "Step " counter(step-counter) ": ";
+            font-weight: bold;
+            color: #009688;
+        }
+        a {
+            color: #009688;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💻 Treatment Planning System (TPS): The Computational Core</h1>
+    <p>Translating medical images into precise radiation dose distributions.</p>
+</header>
+
+<div class="container">
+
+    <p>The Treatment Planning System (TPS) is a sophisticated computer software platform used by medical physicists and radiation oncologists to determine the optimal way to deliver the prescribed radiation dose. It is where imaging, anatomy, radiobiology, and radiation physics converge. The TPS's main function is to calculate the 3D dose distribution within the patient's anatomy, ensuring the dose covers the tumor while sparing critical organs.</p>
+
+    <hr>
+
+    <h2>The Treatment Planning Workflow</h2>
+    <p>The entire process within the TPS is a series of precise, physics-intensive steps:</p>
+
+    <div class="step">
+        <h3>Patient Data Acquisition and Contouring</h3>
+        <ul>
+            <li><strong>Imaging:</strong> Patient anatomy is primarily captured using CT scans (for electron density information crucial for dose calculation) and often supplemented by MRI or PET for better soft tissue visualization. The scan data is transferred to the TPS in **DICOM** format.</li>
+            <li><strong>Contouring:</strong> The physician and/or physicist manually delineate (draw) the target volumes (like Gross Tumor Volume - GTV, Clinical Target Volume - CTV, Planning Target Volume - PTV) and the Organs At Risk (OARs) on the 3D image set.</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>Beam and Geometry Setup</h3>
+        <ul>
+            <li><strong>Isocenter Placement:</strong> The central point of treatment (isocenter) is defined in 3D space, relative to the tumor.</li>
+            <li><strong>Beam Arrangement:</strong> The physicist selects the number, angle, size, and type of radiation beams (photons, electrons, or protons) to be used. The Linac machine parameters (energy, collimator, gantry angles) are modeled precisely.</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>Dose Calculation and Modeling</h3>
+        <p>This is the core physics task, where the TPS models the complex interaction of radiation with heterogeneous tissue (bone, lung, soft tissue).</p>
+        <ul>
+            <li><strong>Dose Calculation Algorithms:</strong> Modern TPS use advanced algorithms:
+                <ul>
+                    <li>Model-Based Algorithms (e.g., Pencil Beam, Convolution/Superposition): Faster, but less accurate in highly heterogeneous regions (like near the lung or bone).</li>
+                    <li>Monte Carlo (MC) Algorithms: The most accurate method, simulating the statistical behavior of millions of individual particles (photons, electrons) interacting with the patient's geometry. This is the gold standard for accuracy but requires more computational time.</li>
+                </ul>
+            </li>
+            <li><strong>Dose-Volume Histogram (DVH):</strong> The TPS generates a graph that plots the volume of a structure (e.g., PTV or OAR) that receives a given dose. This is the primary tool for plan evaluation. </li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>Plan Optimization and Evaluation</h3>
+        <ul>
+            <li><strong>Optimization (for IMRT/VMAT):</strong> The TPS uses optimization algorithms to automatically adjust the beam parameters (like Multi-Leaf Collimator positions and beam intensity) based on clinical constraints (e.g., PTV must receive at least 95% of the dose; Spinal Cord must not exceed 10 Gy).</li>
+            <li><strong>Evaluation:</strong> The physicist and oncologist check the Dose Distribution and DVH to ensure the dose criteria are met and the plan is clinically acceptable.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Key Physics Concepts Modeled by the TPS</h2>
+    <p>The TPS must account for several critical physical effects for accurate treatment:</p>
+
+    <div class="key-concept">
+        <h3>Electron Density and CT Numbers</h3>
+        <p>The TPS uses the Hounsfield Units (HU) from the CT scan to map the electron density (&rho;<sub>e</sub>) of the tissue. Since dose is the energy absorbed per mass, and radiation attenuation depends directly on &rho;<sub>e</sub>, this mapping is essential for accurate dose calculation. Bone, lung, and fat have significantly different electron densities, causing variations in dose deposition that must be calculated precisely.</p>
+    </div>
+
+    <ul>
+        <li><strong>Heterogeneity Corrections:</strong> Adjustments made to the calculated dose to account for areas of varying density (like air pockets or dense bone) that affect how the beam travels and deposits energy.</li>
+        <li><strong>Machine Modeling:</strong> Every physical component of the Linac (collimators, flattening filter, beam output) is meticulously measured and modeled within the TPS to ensure the computer calculation reflects the actual beam delivered.</li>
+        <li>Quality Assurance (QA) Data: The TPS relies on experimental data (e.g., percentage depth dose, beam profiles) measured by physicists to ensure the accuracy of its models.</li>
+    </ul>
+
+    <p>The TPS is effectively a complex computational physics simulator, where the accuracy of the final dose delivery depends entirely on the precision of the input data and the sophistication of the algorithms used.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radiodiagnostic - Medical Physicist</title>
+  <style>
+    body{font-family:Arial, sans-serif;margin:0;background:#f6f8fa;color:#0f172a}
+    header{background:#0b6d8a;color:#fff;padding:20px}
+    nav a{color:#fff;margin-right:15px;text-decoration:none}
+    .container{max-width:1000px;margin:20px auto;padding:0 15px}
+    .article{background:#fff;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+    .article h2{margin:0}
+    .article p{color:#555}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Radiodiagnostic</h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="radiodiagnostic/x-ray-tube-components.html">X-ray Tube Components</a>
+    <a href="radiodiagnostic/fundamental-of-imaging-physics.html">Fundamental of Imaging Physics</a>
+    <a href="radiodiagnostic/medical-imaging-modalities.html">Medical Imaging Modalities</a>
+    <a href="radiodiagnostic/image-formation-theory.html">Image Formation Theory</a>
+    <a href="radiodiagnostic/conventional-radiography.html">Conventional Radiography</a>
+    <a href="radiodiagnostic/radiodiagnostic-&-interventional.html">Radiodiagnostic & Interventional</a>
+  </nav>
+</header>
+
+<div class="container">
+
+    <p><strong>Radiodiagnostic Physics</strong> is the branch of medical physics concerned with the physical mechanisms, instrumentation, image quality, and patient safety related to diagnostic imaging procedures. The primary goal is to produce images with sufficient Signal-to-Noise Ratio (SNR) and Contrast Resolution to detect subtle pathological changes, all while adhering to the ALARA Principle (As Low As Reasonably Achievable).</p>
+
+    <hr>
+
+    <h2>1. Computed Tomography (CT) Physics</h2>
+    <p>CT produces cross-sectional (tomographic) images by measuring the attenuation of X-rays from multiple angles.</p>
+
+    <h3>The Acquisition Process</h3>
+    <ul>
+        <li><strong>X-ray Tube Rotation:</strong> The X-ray tube and the detector array rotate 360 degrees around the patient to acquire a complete set of projection data.</li>
+        <li><strong>Data Acquisition System (DAS):</strong> Measures the transmitted X-ray intensity and converts it into digital electronic signals.</li>
+        <li><strong>Helical (Spiral) Scanning:</strong> Modern scanners move the patient table simultaneously with gantry rotation, acquiring a continuous spiral volume of data, which is essential for rapid, motion-free imaging.</li>
+    </ul>
+
+    <h3>Image Reconstruction</h3>
+    <div class="key-concept">
+        <p><strong>Hounsfield Units (HU):</strong> The grayscale value of each pixel in a CT image. It is calculated based on the linear attenuation coefficient (mu) of the tissue relative to water (mu <sub>w</sub>):</p>
+        <p class="formula">
+            HU = 1000 &times; ( &mu;<sub>tissue</sub> - &mu;<sub>water</sub> ) / &mu;<sub>water</sub>
+        </p>
+        <p>This unit provides a standardized, quantitative map of tissue density, crucial for radiotherapy planning.</p>
+    </div>
+    <ul>
+        <li><strong>Filtered Back Projection (FBP):</strong> The classic mathematical technique used to reconstruct the axial image from the acquired projections.</li>
+        <li>Kernel/Filter: A mathematical filter applied during reconstruction that dictates the appearance of the image. A "bone kernel" enhances sharp details (high spatial frequency) but increases noise; a "soft tissue kernel" reduces noise but results in a smoother image.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Magnetic Resonance Imaging (MRI) Physics</h2>
+    <p>MRI provides superior soft tissue contrast without using ionizing radiation by exploiting the properties of hydrogen protons.</p>
+
+    <h3>The Creation of Contrast</h3>
+    <ul>
+        <li><b>Imaging Parameters (Pulse Sequences):</b> The timing of the Radiofrequency (RF) pulses and signal acquisition determines the image weighting, dictating contrast:
+            <ul>
+                <li><strong>T <sub>1</sub> Weighting:</strong> Good anatomical detail; CSF (cerebrospinal fluid) is dark, fat is bright.</li>
+                <li><strong>T <sub>2</sub> Weighting:</strong> Sensitive to pathology/edema; CSF is bright, most tissue appears mid-gray.</li>
+                <li><strong>Proton Density (PD) Weighting:</strong> Depends primarily on the concentration of water protons.</li>
+            </ul>
+        </li>
+        <li><b>Gradient Coils:</b> Used to spatially encode the signal by linearly varying the magnetic field, making the Larmor frequency dependent on the spatial location. This is necessary for reconstruction via the Fourier Transform. </li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Mammography and Ultrasound Physics</h2>
+    <p>These specialized modalities rely on unique physical interactions tailored to specific anatomical areas.</p>
+
+    <h3>Mammography (Breast Imaging)</h3>
+    <ul>
+        <li><b>Low Energy X-rays:</b>Uses very low kVp (typically 25-35 kVp) to maximize Photoelectric Effect in soft tissue, thus enhancing the subtle contrast differences between glandular tissue, fat, and microcalcifications.</li>
+        <li><b>Target Material:</b> Requires anodes with lower Z materials like Molybdenum (Mo) or Rhodium (Rh) to produce characteristic X-rays in the optimal energy range for breast tissue.</li>
+        <li><b>Compression:</b> Essential to reduce dose, spread out overlapping tissue, and minimize motion blur.</li>
+    </ul>
+
+    <h3>Ultrasound Imaging</h3>
+    <ul>
+        <li><b>Contrast Mechanism:</b> Based on the reflection of high-frequency sound waves at interfaces between tissues with different Acoustic Impedances (Z).</li>
+        <li><b>Resolution vs. Penetration:</b> There is an inherent trade-off: higher frequency sound waves give better spatial resolution but have lower penetration depth (more rapid attenuation). The frequency must be selected based on the depth of the structure being imaged.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Dose and Image Quality Management</h2>
+    <p>The medical physicist continually manages the balance between diagnostic quality and radiation dose.</p>
+
+    <ul>
+        <li><b>Dose Metrics:</b> Diagnostic dose is tracked using metrics like Dose Area Product (DAP) in X-ray/fluoroscopy and CT Dose Index (CTDI) in CT scanning.</li>
+        <li><b>Quality Control (QC):</b> Regular, mandated testing (e.g., phantom imaging, calibration checks) of all equipment is necessary to ensure the actual delivered dose and the measured image quality remain consistent over time, maintaining the initial manufacturer specifications.</li>
+        <li><b>Artifact Recognition:</b> The physicist must understand the physical origins of image artifacts (e.g., beam hardening in CT, susceptibility artifacts in MRI, acoustic shadowing in Ultrasound) to mitigate them and prevent misdiagnosis.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

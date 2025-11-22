@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to External Beam Radiotherapy (EBRT) Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff5722; /* Orange color for EBRT */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #e64a19;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #00bcd4;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #ffecb3;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚙️ External Beam Radiotherapy (EBRT) / Teletherapy Physics</h1>
+    <p>Precision treatment from a distance using high-energy Linear Accelerators.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>External Beam Radiotherapy (EBRT)</strong>, often called Teletherapy (from Greek "tele" meaning "far"), is the most common form of radiation treatment. It involves delivering a beam of **ionizing radiation** from a source located a significant distance away from the patient, typically using a Linear Accelerator (Linac). The core physics challenge is shaping the dose from a distant source to accurately conform to the tumor volume deep inside the body.</p>
+
+    <hr>
+
+    <h2>The Treatment Engine: Linear Accelerator (Linac)</h2>
+    <p>The Linac is the powerhouse of modern EBRT, generating high-energy photon (X-ray) and electron beams.</p>
+    
+    <h3>Key Components and Function</h3>
+    <ul>
+        <li><strong>Electron Gun:</strong> Emits electrons, similar to a TV cathode ray tube.</li>
+        <li><strong>Accelerating Waveguide:</strong> Uses high-frequency microwave power to accelerate electrons to near the speed of light.</li>
+        <li><strong>Target (for Photons):</strong> High-speed electrons hit a high Z target (like Tungsten) to produce high-energy X-rays via Bremsstrahlung (braking radiation).</li>
+        <li><strong>Flattening Filter:</strong> Required for X-ray beams. Since the Bremsstrahlung beam is forward-peaked, this conical filter is placed in the beam path to achieve a flat, uniform dose distribution across the treatment field.</li>
+        <li><strong>Scattering Foil (for Electrons):</strong> Used instead of the target and flattening filter when an electron beam is desired. It spreads the pencil-thin electron beam into a clinically useful field size.</li>
+    </ul>
+
+    <hr>
+
+    <h2>The Physics of Depth Dose and Skin Sparing</h2>
+    <p>EBRT uses high-energy (Megavoltage, MV) beams to achieve a crucial physical effect: skin sparing.</p>
+    
+    <h3>Build-up Region and Dose Maximum (D<sub>max</sub>)</h3>
+    <div class="key-concept">
+        <p>Unlike low-energy X-rays, MV photons do not deposit their maximum dose on the skin surface. The dose increases from the surface (the build-up region) to a specific depth (D<sub>max</sub>) after which the dose slowly falls off due to attenuation.</p>
+        <p>This is due to the forward scattering of secondary electrons produced by the MV photons. These electrons are projected deeper into the tissue before they deposit their energy. Typical D<sub>max</sub> values:</p>
+        <ul>
+            <li>6 MV X-rays: ~1.5 cm below the surface.</li>
+            <li>18 MV X-rays: ~3.5 cm below the surface.</li>
+        </ul>
+        
+    </div>
+    
+    <p>This physical characteristic is vital because it allows the dose to the skin (which is highly radiosensitive) to be minimized, while the maximum dose is deposited within the tumor volume.</p>
+
+    <hr>
+
+    <h2>Advanced Delivery Techniques</h2>
+    <p>Modern EBRT techniques use sophisticated modulation and movement to optimize the dose distribution.</p>
+
+    <ol>
+        <li><strong>Intensity Modulated Radiation Therapy (IMRT):</strong>
+            <ul>
+                <li>The beam is broken into thousands of "beamlets," and the intensity of each is individually controlled using a Multi-Leaf Collimator (MLC).</li>
+                <li>Physics Goal: To create a highly conformal (shape-matching) dose distribution that "paints" a high dose onto the tumor while sharply dropping off the dose around critical structures.</li>
+            </ul>
+        </li>
+        <li><strong>Volumetric Modulated Arc Therapy (VMAT):</strong>
+            <ul>
+                <li>A faster form of IMRT where the Linac gantry rotates continuously around the patient while simultaneously modulating the dose rate, gantry speed, and MLC leaf positions.</li>
+                <li>Advantage: Delivers the entire treatment plan in a single or double rotation (arc), significantly reducing treatment time.</li>
+            </ul>
+        </li>
+        <li><strong>Stereotactic Radiotherapy (SRT) / Stereotactic Body Radiation Therapy (SBRT):</strong>
+            <ul>
+                <li>Delivers a very high dose in just 1-5 fractions (hypofractionation) with sub-millimeter precision.</li>
+                <li>Key Requirement: Highly accurate image guidance (Image Guided Radiation Therapy - IGRT) is mandatory to ensure the tumor position is confirmed immediately before and sometimes during treatment.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p class="key-concept"><strong>The Role of the MLC:</strong> The Multi-Leaf Collimator is an array of computer-controlled tungsten "leaves" that move independently to dynamically shape the radiation field, critical for IMRT and VMAT.</p>
+
+</div>
+
+</body>
+</html>

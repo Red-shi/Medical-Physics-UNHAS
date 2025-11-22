@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conventional Radiography Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00bcd4; /* Cyan color for Radiography */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #0097a7;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00bcd4;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🖼️ Conventional Radiography Physics: The Projection Image</h1>
+    <p>Understanding the fundamental principles of static 2D X-ray imaging.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>Conventional Radiography</strong>, often simply called an X-ray, is the oldest and most common form of medical imaging. It produces a two-dimensional projection (shadow) of the three-dimensional body onto a detector. Its physical basis relies entirely on the differential attenuation of X-ray photons as they pass through various tissues.</p>
+
+    <hr>
+
+    <h2>1. The Physics of Image Formation</h2>
+    <p>Image contrast is created by differences in how tissues absorb or scatter X-rays.</p>
+
+    <h3>Differential Attenuation</h3>
+    <ul>
+        <li><b>Mechanism:</b> The intensity of the X-ray beam is reduced (attenuated) exponentially as it traverses the patient. This attenuation is a function of the tissue's physical density (&rho;) and its effective atomic number (Z).</li>
+        <li><b>Key Interactions:</b>
+            <ul>
+                <li><b>Photoelectric Effect:</b> Dominant interaction for low-energy X-rays and high-Z materials (like bone). Leads to high contrast.</li>
+                <li><b>Compton Scattering:</b> Dominant interaction for higher-energy diagnostic X-rays and soft tissue. Contributes to image noise (scatter radiation).</li>
+            </ul>
+        </li>
+        <li><b>Contrast Scale:</b>
+            <p><strong>Air</strong> (lowest attenuation, darkest on film) &rarr; <strong>Fat</strong> &rarr; <strong>Soft Tissue/Water</strong> &rarr; <strong>Bone</strong> (highest attenuation, brightest on film) &rarr; <strong>Metal/Contrast Agent</strong>.</p>
+        </li>
+    </ul>
+    
+    <div class="key-concept">
+        <p><strong>Exponential Attenuation Law:</strong> The intensity (I) of the beam after passing through matter is given by:</p>
+        <div class="formula">
+            I = I<sub>0</sub> e<sup>-&mu;x</sup>
+        </div>
+        <p>where I<sub>0</sub> is the initial intensity, mu is the linear attenuation coefficient, and x is the thickness.</p>
+    </div>
+
+    <hr>
+
+    <h2>2. Key Components of the Radiographic System</h2>
+    <p>The system comprises three main parts that control the X-ray production and capture the image.</p>
+
+    <h3>X-ray Tube and Generator</h3>
+    <ul>
+        <li><b>Tube:</b> The source of X-rays (see previous lecture on X-ray Tube Components).</li>
+        <li><b>Generator:</b> Provides the high voltage and current to the tube, controlled by three technical factors:
+            <ul>
+                <li>kVp (Kilovoltage Peak): Controls the quality (maximum energy/penetration) of the X-rays. Higher kVp leads to less differential attenuation (lower contrast).</li>
+                <li>mA (Milliampere): Controls the quantity (number) of X-ray photons produced per second.</li>
+                <li>s (Time): Controls the duration of the exposure. The product mAs determines the total number of photons produced (the X-ray quantity/dose).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Beam Modification and Scatter Reduction</h3>
+    <ul>
+        <li><b>Filtration:</b> An aluminum plate placed in the beam path to absorb low-energy ("soft") X-rays that only contribute to patient skin dose without penetrating to form the image. This process "hardens" the beam.</li>
+        <li><b>Collimator:</b> A lead-lined device that limits the X-ray field size to the area of interest, reducing the volume of tissue irradiated and minimizing scatter radiation.</li>
+        <li><b>Grid:</b> A thin structure made of alternating strips of lead and radiolucent material (e.g., carbon fiber). Placed between the patient and the detector, its primary function is to absorb scatter photons (which travel obliquely) while allowing primary photons (which travel straight) to pass through, thereby improving image contrast. </li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Image Receptor Technology</h2>
+    <p>This is where the latent (invisible) image is captured and converted into a digital signal.</p>
+
+    <h3>Digital Radiography (DR) Systems</h3>
+    <ul>
+        <li><b>Flat Panel Detectors (FPDs):</b> The modern standard, replacing film/screen systems. They convert X-ray energy directly or indirectly into an electrical charge.
+            <ul>
+                <li>Indirect Conversion: X-rays &rarr; light (via a scintillator, often Cesium Iodide, CsI) &rarr; electrical charge (via a Photodiode/TFT array).</li>
+                <li>Direct Conversion: X-rays &rarr; electrical charge (via a photoconductor, often Amorphous Selenium).</li>
+            </ul>
+        </li>
+        <li><b>Digital Image Processing:</b> Unlike film, the FPD signal is digitized and processed by a computer. This allows for post-acquisition adjustments to contrast and brightness (window/leveling) without repeating the exposure.</li>
+    </ul>
+
+    <h3>Geometric Principles</h3>
+    <ul>
+        <li><b>Magnification:</b> Occurs because the X-ray beam diverges. It is reduced by increasing the Source-to-Image Distance (SID) and minimizing the Object-to-Image Distance (OID).</li>
+        <li><b>Focal Spot Size:</b> Affects geometric unsharpness (penumbra). A smaller focal spot produces a sharper image.</li>
+        <li><b>Superimposition:</b> The inherent limitation of 2D radiography where structures at different depths are layered over each other, leading to anatomic noise.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

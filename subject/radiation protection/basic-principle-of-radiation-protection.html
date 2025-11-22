@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Principles of Radiation Protection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4db6ac; /* Aqua color for Safety */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #00897b;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ffb300;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e0f2f1;
+            border-left: 5px solid #4db6ac;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .principle-item {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #00897b;
+        }
+        a {
+            color: #4db6ac;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🛡️ Basic Principles of Radiation Protection</h1>
+    <p>The International Commission on Radiological Protection (ICRP) Framework.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>Radiation Protection (Radiological Protection)</strong> is the science and practice of protecting people and the environment from the harmful effects of ionizing radiation. The system is based on recommendations from the International Commission on Radiological Protection (ICRP), aiming to manage and control exposure to prevent deterministic effects and reduce the probability of stochastic effects.</p>
+
+    <hr>
+
+    <h2>1. The Fundamental Principles of Protection</h2>
+    <p>The ICRP system is built on three core, interconnected principles that must be applied to any planned activity involving radiation exposure:</p>
+
+    <div class="principle-item">
+        <h3>1. Justification (Justification of a Practice)</h3>
+        <p><strong>Principle:</strong> Any decision that alters the radiation exposure situation should be justified. The practice must do more good than harm.</p>
+        <ul>
+            <li>Application: The total benefit to society or the individual (e.g., medical diagnosis, cancer treatment, power generation) from using radiation must outweigh the potential radiation detriment (health risk).</li>
+            <li>Example: A diagnostic CT scan is justified only if the information gained will meaningfully impact the patient's management and prognosis.</li>
+        </ul>
+    </div>
+
+    <div class="principle-item">
+        <h3>2. Optimization (ALARA)</h3>
+        <p><strong>Principle:</strong> The likelihood of incurring exposures, the number of people exposed, and the magnitude of individual doses should be kept As Low As Reasonably Achievable (ALARA).</p>
+        <ul>
+            <li>Application: Once a practice is justified, the exposure level must be optimized. This requires a systematic management process using tools and physics knowledge (e.g., shielding, time control, dose tracking).</li>
+            <li>Physics Role: Medical physicists continuously work to reduce patient dose (e.g., minimizing mAs in CT, tighter collimation) while maintaining image quality sufficient for diagnosis.</li>
+        </ul>
+    </div>
+    
+    <div class="principle-item">
+        <h3>3. Dose Limitation (Limitation of Doses)</h3>
+        <p><strong>Principle:</strong> The total dose to any individual from all authorized practices must not exceed specified dose limits set by regulatory bodies.</p>
+        <ul>
+            <li>Application: Dose limits apply only to occupational workers and members of the public, not to patients undergoing necessary medical procedures.</li>
+            <li>Purpose: Primarily to ensure that exposure remains in the region where the risk of stochastic effects (e.g., cancer) is low and to prevent deterministic effects entirely.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>2. Operational Measures of Protection (TIME, DISTANCE, SHIELDING)</h2>
+    <p>To achieve the ALARA principle, three fundamental physical methods are employed, especially for external radiation sources:</p>
+
+    <h3>1. Time</h3>
+    <ul>
+        <li>Principle: The total radiation dose (D) received is directly proportional to the exposure time (t): $D \propto t$.</li>
+        <li>Application: Minimize the time spent in a radiation area. In interventional radiology, the physician tracks "beam-on" time to limit dose to both staff and patient.</li>
+    </ul>
+
+    <h3>2. Distance</h3>
+    <ul>
+        <li>Principle: Radiation intensity decreases rapidly with distance from a point source, following the Inverse Square Law (I &prop; 1/d<sup>2</sup>).</li>
+        <li>Application: Doubling the distance from a point source reduces the dose rate by a factor of four. This is the single most effective safety measure. </li>
+    </ul>
+
+    <h3>3. Shielding</h3>
+    <ul>
+        <li>Principle: Placing an absorbing barrier (shield) between the source and the exposed individual.</li>
+        <li>Application: The thickness and material (e.g., lead, concrete, water) of the shield are determined by the Half-Value Layer (HVL) or Tenth-Value Layer (TVL) of the material for the specific energy of the radiation being used.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Biological Effects and Dosimetric Quantities</h2>
+    
+    <h3>Biological Effects of Concern</h3>
+    <ul>
+        <li>Deterministic Effects (Tissue Reactions): Effects that occur above a threshold dose (e.g., radiation burns, cataracts, sterility). Severity increases with dose. Goal of Protection: Prevention.</li>
+        <li>Stochastic Effects: Effects whose probability of occurrence increases with dose, but severity is independent of dose (e.g., cancer, hereditary effects). No known threshold. Goal of Protection: Risk Reduction.</li>
+    </ul>
+
+    <h3>Key Dosimetry Quantities</h3>
+    <div class="key-concept">
+        <p>The goal of the ICRP framework is to control the Effective Dose (E), measured in Sievert (Sv), which represents the overall potential for stochastic harm to the body. This is crucial for comparing radiation risk across different organs and radiation types (photons, protons, neutrons).</p>
+    </div>
+    <ul>
+        <li>Absorbed Dose (D): Energy absorbed per unit mass. Unit: Gray (Gy).</li>
+        <li>Equivalent Dose (H): Adjusts absorbed dose for the type of radiation using the Radiation Weighting Factor (W<sub>R</sub>). Unit: Sievert (Sv).</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

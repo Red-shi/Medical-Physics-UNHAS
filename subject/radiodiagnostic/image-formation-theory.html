@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Formation Theory in Medical Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #009688; /* Teal color for Theory */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #00796b;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #009688;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🧠 Image Formation Theory: From Physics to Pixels</h1>
+    <p>The mathematical and physical models governing the creation of medical images.</p>
+</header>
+
+<div class="container">
+
+    <p><strong>Image Formation Theory</strong> provides the mathematical framework for understanding how physical measurements are transformed into a visible image. In medical physics, this theory is essential for reconstructing 3D volumes (CT, MRI) and optimizing image quality. The general process involves three stages: Data Acquisition, Image Reconstruction, and Image Display.</p>
+
+    <hr>
+
+    <h2>1. Data Acquisition and Physical Measurement</h2>
+    <p>This stage involves the physical interaction of energy (photons, magnetic fields, sound waves) with the patient to create a measurable signal.</p>
+
+    <h3>Projection and Attenuation (X-ray/Radiography)</h3>
+    <ul>
+        <li><strong>Physical Law:</strong> The attenuation of X-ray intensity (I) through a thickness (x) of material is governed by the Exponential Attenuation Law:
+            <div class="formula">
+                I(x) = I<sub>0</sub> e<sup>-&mu;x</sup>
+            </div>
+            where I<sub>0</sub> is the initial intensity and &mu; is the linear attenuation coefficient.</li>
+        <li><strong>Projection:</strong> The 2D image recorded on the detector is the result of the integrated attenuation along the path of the X-ray beam through the patient.</li>
+    </ul>
+
+    <h3>Signal Localization (MRI)</h3>
+    <div class="key-concept">
+        <p>In MRI, spatial information is encoded using Magnetic Field Gradients. These gradient coils (<strong>G</strong><sub>x</sub>, <strong>G</strong><sub>y</sub>, <strong>G</strong><sub>z</sub>) create small, linear changes in the magnetic field (B) across the patient. This changes the Larmor Frequency (&omega; = &gamma; B) of protons in different spatial locations, allowing the signal's frequency and phase to be uniquely mapped back to a specific location in 3D space.</p>
+    </div>
+
+    <hr>
+
+    <h2>2. Image Reconstruction Theory</h2>
+    <p>This stage involves mathematical processing to convert the measured projection data (raw signal) back into a 2D or 3D image volume.</p>
+
+    <h3>Reconstruction in Computed Tomography (CT)</h3>
+    <ul>
+        <li><b>Radon Transform:</b> The mathematical basis for CT. It states that an image function can be reconstructed from an infinite set of its line integrals (projections).</li>
+        <li><b>Filtered Back Projection (FBP):</b> The historically dominant and fast reconstruction algorithm. It involves:
+            <ol>
+                <li>Filtering: Applying a mathematical filter (e.g., Ram-Lak filter) to the projection data to remove blurring inherent in the back-projection process.</li>
+                <li>Back Projection: Smearing the filtered projection data back across the image matrix at the angle they were acquired. </li>
+            </ol>
+        </li>
+        <li><b>Iterative Reconstruction (IR):</b> Modern algorithms that start with an initial guess, compare the projection of that guess to the measured data, and iteratively refine the image based on the error. IR is slower but can significantly reduce image noise and required patient dose.</li>
+    </ul>
+
+    <h3>Reconstruction in MRI (K-Space)</h3>
+    <ul>
+        <li><b>K-Space:</b> A mathematical space that stores the raw, frequency-domain data acquired during an MRI scan. It is not an image; it represents the spatial frequencies (contrast and resolution) of the final image.</li>
+        <li><b>Fourier Transform:</b> The image is reconstructed from K-Space data by applying the 2D Inverse Fourier Transform (FT <sup>-1</sup>). The center of K-Space contains low-frequency data (overall contrast), and the edges contain high-frequency data (fine detail/resolution).</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Image Quality and Resolution</h2>
+    <p>The physicist's goal is to optimize image quality, which is quantified using specific physical metrics.</p>
+
+    <h3>Spatial Resolution</h3>
+    <ul>
+        <li><b>Definition:</b> The ability of an imaging system to distinguish two adjacent small objects as separate entities.</li>
+        <li><b>Point Spread Function (PSF):</b> Describes the blurring of a perfect point object by the imaging system. A narrower PSF means better spatial resolution.</li>
+        <li><b>Modulation Transfer Function (MTF):</b> The Fourier Transform of the PSF. The MTF is the most comprehensive measure of an imaging system's spatial resolution performance, showing its ability to transfer contrast from the object to the image as a function of spatial frequency.</li>
+    </ul>
+
+    <h3>Contrast and Noise</h3>
+    <ul>
+        <li><b>Image Contrast:</b> The relative difference in signal intensity between two adjacent tissues in the image (e.g., gray matter vs. white matter in MRI). Contrast depends on the physical interaction (e.g., attenuation coefficient) and the acquisition parameters (e.g., T1/T2 weighting in MRI).</li>
+        <li><b>Signal-to-Noise Ratio (SNR):</b> The ratio of the mean signal intensity to the standard deviation of the background noise. A higher SNR means a clearer image. In CT, low SNR often leads to quantum noise (speckling).</li>
+    </ul>
+
+    <p class="key-concept"><b>Key Concept:</b> All imaging systems are a compromise between SNR (signal strength) and Spatial Resolution. Increasing one often leads to a decrease in the other, requiring careful optimization by the medical physicist.</p>
+
+</div>
+
+</body>
+</html>

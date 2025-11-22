@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumentation of Nuclear Medicine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00bcd4; /* Cyan for Instrumentation/Technology */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #0097a7;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00bcd4;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #00bcd4;
+            color: white;
+        }
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔬 Instrumentation of Nuclear Medicine</h1>
+    <p>Detecting and mapping functional information using gamma-ray emissions.</p>
+</header>
+
+<div class="container">
+
+    <p>Nuclear Medicine Instrumentation refers to the devices used to detect and measure radiation emitted from radiopharmaceuticals injected into the patient's body. These instruments provide functional imaging by mapping the distribution of the tracer, revealing physiological processes.</p>
+
+    <hr>
+
+    <h2>1. The Gamma Camera (Scintillation Camera)</h2>
+
+    <p>The Gamma Camera (or Anger Camera) is the workhorse of Nuclear Medicine, used for planar imaging and SPECT. It operates by converting the energy of gamma rays into light and then into an electrical signal.</p>
+
+    <h3>Main Components and Function</h3>
+    <ul>
+        <li class="section-item"><b>1. Collimator:</b> A lead grid placed in front of the crystal. Its function is to filter out scattered or oblique &gamma;-rays, ensuring that only rays traveling perpendicular to the detector surface are measured, which is essential for determining the ray's point of origin.</li>
+        <li class="section-item"><b>2. Scintillation Crystal:</b> Typically a large, thin crystal of Sodium Iodide doped with Thallium (NaI(Tl)). When a &gamma;-ray strikes the crystal, its energy is converted into a flash of visible light (scintillation).</li>
+        <li class="section-item"><b>3. Photomultiplier Tubes (PMT):</b> A hexagonal array of PMTs collects the light from the crystal. The PMTs amplify this light signal into a measurable electrical pulse. The pattern of light detected by the array allows the system to determine the precise (x, y) location of the original &gamma;-ray interaction.</li>
+        <li class="section-item"><b>4. Electronics and Computer:</b> The electrical signals are processed by a pulse height analyzer (PHA) to select only &gamma;-rays with the correct energy (e.g., 140 keV for Tc-99m), eliminating scatter and noise. The computer then forms the 2D image.</li>
+    </ul>
+    
+
+    <hr>
+
+    <h2>2. Single-Photon Emission Computed Tomography (SPECT)</h2>
+
+    <p>SPECT is an extension of the Gamma Camera that provides 3D, cross-sectional images (tomography) rather than just 2D planar views.</p>
+    <ul>
+        <li class="section-item"><b>Mechanism:</b> One or more Gamma Camera heads rotate around the patient (360&deg; or 180&deg;), acquiring a series of 2D images (projections) from different angles.</li>
+        <li class="section-item"><b>Image Reconstruction:</b> A dedicated computer algorithm (often Filtered Back Projection or Iterative Reconstruction) processes these multiple 2D projections to reconstruct the 3D distribution of the radiotracer within the body.</li>
+        <li class="section-item"><b>Hybrid SPECT/CT:</b> Modern systems combine the SPECT unit with a low-dose CT scanner. The CT provides anatomical context, which is fused with the functional SPECT image, drastically improving the accuracy of lesion localization.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Positron Emission Tomography (PET)</h2>
+
+    <p>PET is a distinct imaging modality that uses positron-emitting radiotracers (e.g., F-18 FDG) and relies on the principle of annihilation for detection.</p>
+
+    <h3>PET Detection Principle</h3>
+    <ul>
+        <li class="section-item"><b>Positron Emission:</b> The injected radionuclide emits a positron (beta<sup>+</sup>).</li>
+        <li class="section-item"><b>Annihilation:</b> The positron travels a short distance, loses energy, and collides with a free electron. This annihilation event converts all mass into energy, producing two 511 keV gamma rays traveling in exactly opposite directions (180&deg; apart).</li>
+        <li class="section-item"><b>Coincidence Detection:</b> The PET scanner (a ring of detectors) records an event only if both 511  keV photons strike detectors on opposite sides simultaneously (within a few nanoseconds). This establishes the Line of Response (LOR), indicating the original annihilation location.</li>
+        <li class="section-item"><b>PET/CT and PET/MRI:</b> Like SPECT, PET scanners are almost always combined with CT or MRI for anatomical localization of the functional tracer signal.</li>
+    </ul>
+    
+
+    <hr>
+
+    <h2>4. Comparison of Imaging Technologies</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Gamma Camera/SPECT</th>
+                <th>PET</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Emitted Particle</b></td>
+                <td>Single Gamma ray (&gamma;)</td>
+                <td>Positron (beta<sup>+</sup>) leading to two &gamma; rays</td>
+            </tr>
+            <tr>
+                <td><b>Energy Detected</b></td>
+                <td>Single energy peak (e.g., 140 keV for Tc-99m)</td>
+                <td>Two photons at 511 keV (in coincidence)</td>
+            </tr>
+            <tr>
+                <td><b>Collimation Method</b></td>
+                <td>Physical Collimator (lead septa)</td>
+                <td>Electronic Collimation (Coincidence timing)</td>
+            </tr>
+            <tr>
+                <td><b>Image Resolution</b></td>
+                <td>Lower (limited by physical collimator)</td>
+                <td>Higher (limited by positron range)</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Beam Characteristics in Radiotherapy Physics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50; /* Green color for Electron Beams */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #388E3C;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #FFC107;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .key-concept {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔬 Electron Beam Characteristics in Radiotherapy Physics</h1>
+    <p>Targeting shallow lesions with high precision using charged particles.</p>
+</header>
+
+<div class="container">
+
+    <p>Electron beams are charged particles used primarily to treat shallow-seated tumors (e.g., skin, chest wall, lymph nodes) and boost the dose to superficial tumor bed regions. Their key characteristic is their ability to deposit a uniform dose up to a certain depth and then exhibit a rapid, sharp dose fall-off, effectively sparing underlying critical structures.</p>
+
+    <hr>
+
+    <h2>Electron Beam Production and Shaping</h2>
+    
+    <ul>
+        <li><strong>Production:</strong> In a Linac, the electron gun and accelerating waveguide are used, but the beam is not directed at a high-Z target. Instead, it bypasses the X-ray target and flattening filter.</li>
+        <li><strong>Scattering Foil:</strong> The narrow electron beam must be widened to a clinically useful field size using a thin metal foil (scattering foil) placed in the beam path.</li>
+        <li><strong>Collimation and Cones:</strong> Electron beams are strongly influenced by scattering in air and collimating material. Dedicated electron applicators (cones) are attached to the Linac head to define the field size and ensure a fixed distance to the patient (Source-to-Surface Distance - SSD).</li>
+        <li><strong>Field Shaping:</strong> Unlike photons that use Multi-Leaf Collimators (MLC) near the source, electron beams are shaped using custom-cut cerrobend blocks placed near the patient surface to minimize the penumbra effect caused by scattering.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Primary Characteristic: Depth Dose Distribution</h2>
+    <p>The Percent Depth Dose (PDD) curve for electrons defines their clinical utility, which is fundamentally different from photons.</p>
+
+    <h3>1. The Electron PDD Curve</h3>
+    <div class="key-concept">
+        <p>The electron PDD curve is characterized by three main regions:</p>
+        <ol>
+            <li><strong>Surface Dose:</strong> Typically higher than MV photons (up to 80-95% for lower energies) because the electrons are already charged particles and begin depositing energy immediately upon entering the skin.</li>
+            <li><strong>Dose Plateau (Therapeutic Range, <b>R</b><sub>80</sub>):</strong> A relatively flat region where the dose is close to maximum, suitable for treating the tumor.</li>
+            <li><strong>Rapid Fall-off (Practical Range, <b>R</b><sub>p</sub>):</strong> A sharp drop to zero dose, providing the definitive "cut-off" depth. This is the main advantage over photons.</li>
+        </ol>
+        
+    </div>
+
+    <h3>2. Range Parameters</h3>
+    <ul>
+        <li><strong>Depth of Maximum Dose (<b>D</b><sub>max</sub>):</strong> Occurs at a shallow depth (typically 0.5 to 2.0 cm) and is generally independent of field size.</li>
+        <li><strong>Practical Range, (<b>R</b><sub>p</sub>):</strong> The depth at which the dose drops to zero. This value is used to estimate the maximum penetration depth.</li>
+        <li><strong>Therapeutic Range (<b>R</b><sub>90</sub> or <b>R</b><sub>80</sub>):</strong> The depth to which 90% or 80% of the maximum dose is delivered. <b>R</b><sub>80</sub> is commonly used to approximate the useful treatment depth.</li>
+        <li><strong>Penetration Estimation:</strong> The approximate therapeutic range (<b>R</b><sub>80</sub>) and practical range (<b>R</b><sub>p</sub>) are directly related to the nominal electron energy (<b>E</b> in MeV):
+            <div class="formula">
+                <b>R</b><sub>80</sub> &asymp; <b>E</b>/3 cm &nbsp; | &nbsp; <b>R</b><sub>p</sub> &asymp; <b>E</b>/2 cm
+            </div>
+            *(Example: A 9 MeV beam has a useful range of approximately 3 cm.)*
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>Physics of Electron Interaction and Scatter</h2>
+    <p>Electron interactions are governed by Coulomb forces (repulsion/attraction), leading to significant scattering.</p>
+    
+    <ul>
+        <li><strong>Direct Ionization:</strong> As charged particles, electrons directly ionize atoms and excite molecules.</li>
+        <li><strong>Bremsstrahlung Contamination:</strong> Although electrons are the intended particles, some electrons interact with the collimators or scattering foil, producing unwanted low-level X-ray (photon) contamination. This contamination contributes to the small, non-zero dose deep beyond the <b>R</b><sub>p</sub>.</li>
+        <li><strong>Multiple Coulomb Scattering:</strong> Electrons undergo numerous small-angle deflections as they traverse the medium. This effect causes the beam to spread out, resulting in the characteristic wide penumbra at depth.</li>
+        <li><strong>Heterogeneity Effects:</strong> Electron dosimetry is highly sensitive to inhomogeneities:
+            <ul>
+                <li>Air Cavities (e.g., Lung): Dose decreases distal to the air cavity.</li>
+                <li>Bone/High Density Tissue: Dose decreases within the dense tissue but can increase distal to the bone due to the reduced penetration and subsequent scatter.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p class="key-concept"><strong>Clinical Limitation:</strong> Due to significant scattering, electron beams lose their sharp dose fall-off and uniformity when treating curved surfaces or highly irregular tissue geometries. This requires careful planning and bolus application.</p>
+
+</div>
+
+</body>
+</html>

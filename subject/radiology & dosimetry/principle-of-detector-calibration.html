@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principle of Detector Calibration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50; /* Green for Accuracy/Measurement */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #388e3c;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎯 Principle of Detector Calibration</h1>
+    <p>Ensuring the accuracy and reliability of radiation measurements.</p>
+</header>
+
+<div class="container">
+
+    <p>Detector Calibration is the process of quantitatively relating the response of a radiation detector (the measured signal, e.g., current, voltage, counts) to the true physical quantity being measured (e.g., absorbed dose, exposure, or activity). It is essential in all fields of radiation physics, particularly in medical dosimetry, to ensure that patient treatments and safety checks are accurate.</p>
+
+    <hr>
+
+    <h2>1. Objectives of Calibration</h2>
+
+    <p>The primary goals of calibrating radiation detectors (such as ionization chambers, GM counters, or scintillators) are:</p>
+    <ul>
+        <li class="section-item"><b>Accuracy:</b> To ensure the instrument provides readings that are close to the true value.</li>
+        <li class="section-item"><b>Traceability:</b> To link the detector's measurement to a national or international standard, ensuring consistency across different institutions and countries.</li>
+        <li class="section-item"><b>Correction:</b> To account for known influencing factors (e.g., temperature, pressure, detector size) that affect the raw signal.</li>
+        <li class="section-item"><b>Relating to Dose:</b> To derive a calibration factor that converts the raw reading (e.g., Coulombs or Volts) into a standardized dose quantity (e.g., Gray, Gy).</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. The Calibration Factor (The Core Concept)</h2>
+
+    <p>Calibration involves establishing a factor that translates the detector's output to the desired physical unit. The process typically requires irradiating the detector with a known source under specified reference conditions.</p>
+
+    <div class="key-concept">
+        <h3>Calibration Factor (N)</h3>
+        <p>The calibration factor (or dose conversion factor) is a numerical constant provided for a specific detector and radiation quality (energy).</p>
+        <div class="formula">
+            N<sub>D</sub> = Known True Dose (D) / Detector Reading (M)
+        </div>
+        <p>Once N<sub>D</sub> is known, the absorbed dose for any future measurement under similar conditions is calculated as: D = M &times; N <sub>D</sub></p>
+    </div>
+
+    <hr>
+
+    <h2>3. Calibration Procedure and Standards</h2>
+
+    <p>Calibration is a two-step hierarchical process to ensure traceability:</p>
+
+    <h3>A. Primary Standard Calibration (Reference)</h3>
+    <ul>
+        <li class="section-item"><b>Location:</b> Performed by a National Metrology Institute (NMI) or a Primary Standard Dosimetry Laboratory (PSDL).</li>
+        <li class="section-item"><b>Detectors:</b> Uses primary standard detectors (e.g., free-air ionization chambers for exposure, or calorimeters for absorbed dose) which are highly accurate but complex and fragile.</li>
+        <li class="section-item"><b>Result:</b> The NMI provides calibration factors for secondary standard detectors (used by hospitals).</li>
+    </ul>
+
+    <h3>B. Field Calibration (Hospital or Clinical)</h3>
+    <ul>
+        <li class="section-item"><b>Location:</b> Performed in a clinical setting (e.g., a hospital's radiation therapy vault).</li>
+        <li class="section-item"><b>Detectors:</b> Uses a field-class ionization chamber (working standard), which is calibrated against the secondary standard (which was calibrated by the NMI).</li>
+        <li class="section-item"><b>Result:</b> Establishes the final, in-house clinical dose conversion factor for the therapy machine's output.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Types of Calibration and Correction Factors</h2>
+
+    <h3>A. Beam Quality Dependence</h3>
+    <p>Detector response is often dependent on the energy (quality) of the radiation beam. Calibration is typically performed for a reference quality (e.g., Co-60 &gamma;-rays or MV X-rays).</p>
+    <ul>
+        <li class="section-item"><b>Quality Correction Factor (k<sub>Q</sub>):</b> If a measurement is performed at a different energy (Q) than the reference energy (Q<sub>0</sub>), a factor k<sub>Q</sub> must be applied to correct for the difference in detector response.</li>
+    </ul>
+
+    <h3>B. Environmental Correction</h3>
+    <p>The density of the air in the detector changes with ambient temperature (T) and pressure (P), affecting the ionization measured. This requires a factor k<sub>T,P</sub>:</p>
+    <div class="formula">
+        k<sub>T,P</sub> = ((273.15 + T) / (273.15 + T<sub>0</sub>)) &times; (P<sub>0</sub> / P)
+    </div>
+    <ul>
+        <li class="section-item"><b>T<sub>0</sub>, P<sub>0</sub>:</b> Reference temperature (22&deg;C) and pressure (101.325 kPa).</li>
+        <li class="section-item"><b>T, P:</b> Measured temperature and pressure during calibration/measurement.</li>
+    </ul>
+
+    <hr>
+
+    <h2>5. Calibration in Medical Physics (Clinical Dosimetry)</h2>
+    <p>In radiotherapy, detector calibration is executed according to established international protocols (e.g., TG-51 in the US or IAEA TRS-398).</p>
+    <ul>
+        <li class="section-item"><b>Standard Conditions:</b> Measurement is performed in a water phantom (since water is radiobiologically similar to tissue) at a standard depth and field size.</li>
+        <li class="section-item"><b>Reference Dose Point:</b> The standard calibration point is typically at the depth of dose maximum, d <sub>max</sub> (e.g., 1.5 cm for a 6 MV X-ray beam).</li>
+        <li class="section-item"><b>Output Measurement:</b> Calibration converts the charge measured in the ion chamber into the absorbed dose in water (Gy). This step determines the machine's absolute dose output (e.g., 1 cGy per monitor unit).</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

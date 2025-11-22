@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiation Quantities and Units</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00bcd4; /* Cyan for Physics/Measurement/Units */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #0097a7;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00bcd4;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .unit-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .unit-table th, .unit-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .unit-table th {
+            background-color: #00bcd4;
+            color: white;
+        }
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📐 Radiation Quantities and Units</h1>
+    <p>The system for measuring radiation exposure, dose, and biological effect.</p>
+</header>
+
+<div class="container">
+
+    <p>Radiation Quantities and Units are essential in Medical Physics and Health Physics for defining the amount of radiation emitted, the energy absorbed by a medium, and the resulting biological risk. The modern system utilizes SI (Système International) units, though older conventional units are still sometimes encountered.</p>
+
+    <hr>
+
+    <h2>1. Source Quantity: Activity (Rate of Decay)</h2>
+
+    <p>Activity measures the rate at which a quantity of radioactive material undergoes spontaneous nuclear decay (disintegration).</p>
+
+    <div class="key-concept">
+        <h3>Activity ($\mathbf{A}$)</h3>
+        <ul>
+            <li><b>Definition:</b> The number of nuclear transformations (disintegrations) occurring per unit time.</li>
+            <li><b>SI Unit:</b> Becquerel (Bq)
+                 1 Bq = 1 disintegration per second (s <sup>-1</sup>)</li>
+            <li><b>Conventional Unit:</b> Curie (Ci)
+                 1 Ci = 3.7 &times; 10<sup>10</sup> Bq
+                (3.7 &times; 10<sup>10</sup> is the approximate activity of 1 gram of Radium-226.)</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>2. Exposure and Dose in Medium</h2>
+
+    <h3>A. Exposure (X)</h3>
+    <p>A quantity defined only for X and &gamma; rays in air. It measures the ionization produced in a specified mass of air.</p>
+    <ul>
+        <li class="section-item"><b>Definition:</b> The charge (Q) produced by X or &gamma; rays in a mass (m) of air.</li>
+        <li><b>SI Unit:</b> Coulomb per kilogram (C/kg).</li>
+        <li><b>Conventional Unit:</b> Roentgen (R) (1 R &asymp; 2.58 &times; 10 <sup>-4</sup> C/kg).</li>
+    </ul>
+
+    <h3>B. Absorbed Dose (D)</h3>
+    <p>The most fundamental physical quantity in dosimetry. It measures the energy deposited per unit mass of any material (tissue, bone, water, air).</p>
+    <div class="key-concept">
+        <h3>Absorbed Dose (D)</h3>
+        <ul>
+            <li><b>Definition:</b> The energy (E) absorbed per unit mass (m) of the absorbing medium.
+                D = dE/dm</li>
+            <li><b>SI Unit:</b> Gray (Gy)
+                 1 Gy = 1 Joule per kilogram (1 J/k)</li>
+            <li><b>Conventional Unit:</b> Rad (Radiation Absorbed Dose)
+                 1 Gy = 100 Rad</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>3. Biological Quantities (Risk and Effect)</h2>
+
+    <p>Since equal absorbed doses of different types of radiation (e.g., &alpha; vs. &gamma;) cause different amounts of biological damage due to varying LET, the following quantities are used to standardize the risk.</p>
+
+    <h3>A. Equivalent Dose (H)</h3>
+    <p>Accounts for the varying biological effectiveness of different radiation types.</p>
+    <div class="formula">
+         H = D &times; W <sub>R</sub>
+    </div>
+    <ul>
+        <li class="section-item"><b>Definition:</b> Absorbed dose (D) multiplied by the Radiation Weighting Factor (W<sub>R</sub>), which is based on the radiation type. (W<sub>R</sub> = 1 for X, &gamma;, e; W <sub>R</sub> = 20 for &alpha; particles).</li>
+        <li><b>SI Unit: Sievert (Sv)</b>
+             1 Sv = 1 J/kg</li>
+        <li><b>Conventional Unit:</b> Rem (Roentgen Equivalent Man)
+             1 Sv = 100 Rem</li>
+    </ul>
+
+    <h3>B. Effective Dose (E)</h3>
+    <p>Accounts for the varying sensitivity of different tissues and organs to radiation-induced stochastic (long-term) effects.</p>
+    <div class="formula">
+        E = &Sigma;<sub>T</sub> (H<sub>T</sub> &times; W<sub>T</sub>)
+    </div>
+    <ul>
+        <li class="section-item"><b>Definition:</b> Sum of the equivalent doses (H<sub>T</sub>) to all organs, each weighted by the Tissue Weighting Factor (W<sub>T</sub>), which reflects the organ's sensitivity to stochastic effects (e.g., bone marrow has a high W<sub>T</sub>).</li>
+        <li><b>Unit:</b> Sievert (Sv). This unit is used for radiation protection and setting dose limits to ensure the overall risk is standardized regardless of the exposure pattern.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Summary of Key Units</h2>
+
+    <table class="unit-table">
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Measures</th>
+                <th>SI Unit</th>
+                <th>Conventional Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Activity (A)</b></td>
+                <td>Source Strength (Disintegrations/s)</td>
+                <td>Becquerel (Bq)</td>
+                <td>Curie (Ci)</td>
+            </tr>
+            <tr>
+                <td><b>Absorbed Dose (D)</b></td>
+                <td>Energy Deposited in Mass</td>
+                <td>Gray (Gy)</td>
+                <td>Rad</td>
+            </tr>
+            <tr>
+                <td><b>Equivalent Dose (H)</b></td>
+                <td>Biological Effect (Risk by type)</td>
+                <td>Sievert (Sv)</td>
+                <td>Rem</td>
+            </tr>
+            <tr>
+                <td><b>Effective Dose (E)</b></td>
+                <td>Overall Stochastic Risk</td>
+                <td>Sievert (SV)</td>
+                <td>Rem</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Properties of Ionizing Radiation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2196f3; /* Blue for Physics/Properties */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #1565c0;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #2196f3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚛️ Physical Properties of Radiation</h1>
+    <p>Defining characteristics and energy deposition mechanisms of ionizing radiation.</p>
+</header>
+
+<div class="container">
+
+    <p>Ionizing radiation is classified by its physical nature (mass, charge, and origin), which dictates how it interacts with matter. Understanding these properties is fundamental to Medical Physics for dose calculation, shielding design, and optimizing diagnostic and therapeutic procedures.</p>
+    
+    <hr>
+
+    <h2>1. Classification by Type and Nature</h2>
+
+    <p>Ionizing radiation is broadly divided into two groups based on whether the particles possess mass and charge:</p>
+
+    <h3>A. Particulate Radiation (Has Mass)</h3>
+    <p>Consists of high-energy subatomic particles that possess both mass and momentum.</p>
+    <ul>
+        <li class="section-item"><b>Alpha (&alpha;) Particles:</b> Positively charged (2+), heavy (4 atomic mass units). Low penetration, high ionization density.</li>
+        <li class="section-item"><b>Beta (&beta;) Particles/Electrons (e<sup>-</sup>):</b> Negatively charged (1-), very light. Moderate penetration, moderate ionization.</li>
+        <li class="section-item"><b>Protons (p):</b> Positively charged (1+). Used in particle therapy; exhibit the Bragg Peak.</li>
+        <li class="section-item"><b>Neutrons (n):</b> Neutral (no charge). Highly penetrating; cause ionization indirectly via nuclear reactions.</li>
+    </ul>
+
+    <h3>B. Electromagnetic (EM) Radiation (No Mass)</h3>
+    <p>Consists of energy packets (photons) traveling at the speed of light (c).</p>
+    <ul>
+        <li class="section-item"><b>X-rays:</b> Originate from orbital electrons or bremsstrahlung processes (accelerated electrons stopping in a target).</li>
+        <li class="section-item"><b>Gamma (&gamma;) Rays:</b> Originate from the atomic nucleus during radioactive decay.</li>
+        <li class="section-item"><b>Property Note:</b> Both X-rays and &gamma;-rays are photons, distinguished only by their origin. They have no charge and high penetration.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Key Physical Properties Governing Interaction</h2>
+
+    <p>The following properties determine how easily radiation penetrates matter and how damaging it is:</p>
+
+    <h3>A. Charge</h3>
+    <ul>
+        <li class="section-item"><b>Charged Particles (&alpha;, &beta;, p):</b> Interact strongly and continuously via Coulombic forces (direct ionization). Their path is short and highly ionizing.</li>
+        <li class="section-item"><b>Neutral Particles (Photons, n):</b> Interact randomly and abruptly (indirect ionization). Their path is long and probabilistic.</li>
+    </ul>
+
+    <h3>B. Energy (E)</h3>
+    <p>Measured in electron volts (eV) or Mega-electron volts (MeV).</p>
+    <ul>
+        <li class="section-item"><b>Kinetic Energy (Particulate):</b> The energy of motion. Determines the maximum range and penetration depth.</li>
+        <li class="section-item"><b>Photon Energy (EM):</b> Governs the likelihood and type of interaction (Photoelectric, Compton, Pair Production). Higher energy generally leads to greater penetration.</li>
+    </ul>
+
+    <h3>C. Linear Energy Transfer (LET)</h3>
+    <p>The rate at which energy is deposited by radiation as it travels through a medium.</p>
+    <div class="formula">
+        LET = dE/dx (units: keV/&mu;m)
+    </div>
+    <ul>
+        <li class="section-item"><b>High LET:</b> Large amount of energy deposited over a short distance (e.g., &alpha; particles, Protons). Causes dense ionization and severe, localized biological damage.</li>
+        <li class="section-item"><b>Low LET:</b> Small amount of energy deposited over a long distance (e.g., X-rays, &gamma;-rays, &beta; particles). Causes sparse ionization and damage that is more widely distributed.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Interaction Mechanism and Penetration</h2>
+
+    <div class="key-concept">
+        <h3>Depth of Penetration</h3>
+        <p>The penetration depth is inversely related to the likelihood of interaction. Charged particles (high LET) penetrate little, while photons (low LET) penetrate deeply.</p>
+        
+        <ul>
+            <li><b>Particulate Radiation:</b> Characterized by a finite Range (the distance it travels before stopping). The penetration depth is predictable and deterministic.</li>
+            <li><b>EM Radiation:</b> Characterized by the Half-Value Layer (HVL), which is the thickness of a material required to reduce the intensity of the radiation beam by half. Penetration follows an exponential attenuation and is probabilistic.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

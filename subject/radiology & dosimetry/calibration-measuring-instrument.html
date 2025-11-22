@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibration of Measuring Instruments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3f51b5; /* Indigo for Metrology/Standards */
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #303f9f;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ff9800;
+            margin-top: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-item {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .key-concept {
+            background-color: #e8eaf6;
+            border-left: 5px solid #3f51b5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .formula {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a {
+            color: #3f51b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚖️ Calibration of Measuring Instruments</h1>
+    <p>The metrological process of establishing measurement accuracy.</p>
+</header>
+
+<div class="container">
+
+    <p>Calibration is the process of comparing a measured value from a measuring instrument to a value from a known, traceable standard. It is a fundamental activity in the field of Metrology (the science of measurement) to ensure the accuracy and reliability of all measurement equipment.</p>
+
+    <hr>
+
+    <h2>1. Definition and Purpose</h2>
+
+    <h3>A. Formal Definition</h3>
+    <p>Calibration is the operation that, under specified conditions, first establishes a relation between the quantity values with measurement uncertainties provided by measurement standards and corresponding indications with associated uncertainties and, in a second step, uses this information to establish a relation for obtaining a measurement result from an indication.</p>
+
+    <h3>B. Key Purposes</h3>
+    <ul>
+        <li class="section-item"><b>Establish Accuracy:</b> To determine the deviation (error) of the instrument's reading from the true value.</li>
+        <li class="section-item"><b>Traceability:</b> To link the measurements back to national or international standards (SI units), ensuring results are globally comparable.</li>
+        <li class="section-item"><b>Quality Assurance:</b> To meet regulatory and quality standards (e.g., ISO 9001) required in manufacturing, medical, and scientific sectors.</li>
+    </ul>
+    
+
+    <hr>
+
+    <h2>2. The Calibration Process and Traceability</h2>
+
+    <p>Calibration typically involves three steps: measurement, documentation, and adjustment (if necessary).</p>
+
+    <h3>A. The Measurement Comparison</h3>
+    <p>The instrument undergoing calibration (the Device Under Test, DUT) is exposed to a precisely known input from a Reference Standard. The DUT's reading is recorded at several points across its operating range.</p>
+    <div class="formula">
+        Correction = Reference Value - Measured Value
+    </div>
+
+    <h3>B. Metrological Traceability</h3>
+    <p>This is the essential principle. The calibration must form an unbroken chain of comparisons, linking the field instrument back to a Primary Standard maintained by a National Metrology Institute (NMI) like NIST or NPL. This chain ensures measurement results are consistent worldwide.</p>
+
+    <h3>C. Documentation (The Calibration Certificate)</h3>
+    <p>A calibration certificate is issued, detailing:</p>
+    <ul>
+        <li class="section-item">The "As Found" data (the instrument's performance before adjustment).</li>
+        <li class="section-item">The Reference Standards used (including their own traceability).</li>
+        <li class="section-item">The Measurement Uncertainty (U), which quantifies the range of values within which the true value is expected to lie.</li>
+        <li class="section-item">A statement of Compliance (whether the instrument meets its specifications).</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Calibration vs. Adjustment</h2>
+
+    <p>It is crucial to distinguish between calibration (comparison) and adjustment (correction).</p>
+
+    <div class="key-concept">
+        <ul>
+            <li><b>Calibration:</b> The act of observation and documentation (determining the error). Calibration does **NOT** necessarily involve changing the instrument.</li>
+            <li><b>Adjustment:</b> The act of setting or correcting the instrument's reading to bring it into agreement with the reference standard, usually done if the calibration reveals a deviation outside the tolerance limit.</li>
+        </ul>
+        <p>Note: When adjustments are made, the calibration process must be repeated to verify the adjustment was successful and document the "As Left" condition.</p>
+    </div>
+
+    <hr>
+
+    <h2>4. Environmental and Uncertainty Factors</h2>
+
+    <p>The reliability of calibration depends on controlling external factors and quantifying all sources of error.</p>
+
+    <h3>A. Influencing Factors</h3>
+    <p>Calibration must be performed under controlled environmental conditions, as instruments are sensitive to:</p>
+    <ul>
+        <li class="section-item"><b>Temperature</b> (affects material expansion and electronic components).</li>
+        <li class="section-item"><b>Pressure</b> (critical for gas-based sensors, e.g., pressure gauges, radiation detectors).</li>
+        <li class="section-item"><b>Humidity</b> (affects insulation and electronic drift).</li>
+    </ul>
+
+    <h3>B. Measurement Uncertainty (U)</h3>
+    <p>Uncertainty is not simply the error; it is the doubt about the validity of the measurement. Uncertainty must be calculated and stated in the calibration certificate, incorporating all sources of error, including the uncertainty of the reference standard itself.</p>
+
+</div>
+
+</body>
+</html>
