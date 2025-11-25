@@ -15,7 +15,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #009688; /* Teal color for Computation */
+            background-color: #0b6d8a; 
             color: white;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -24,13 +24,13 @@
             font-size: 2.5em;
         }
         h2 {
-            color: #00796b;
+            color: #0b6d8a;
             border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
             margin-top: 30px;
         }
         h3 {
-            color: #ff9800;
+            color: #a05555;
             margin-top: 20px;
         }
         .container {
@@ -45,7 +45,7 @@
         }
         .key-concept {
             background-color: #e0f2f1;
-            border-left: 5px solid #00897b;
+            border-left: 5px solid #0b6d8a;
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
@@ -86,6 +86,8 @@
 
     <div class="step">
         <h3>Patient Data Acquisition and Contouring</h3>
+                <img src="fig/Patient Data Acquisition and Contouring.png" width="500" height="350"> 
+
         <ul>
             <li><strong>Imaging:</strong> Patient anatomy is primarily captured using CT scans (for electron density information crucial for dose calculation) and often supplemented by MRI or PET for better soft tissue visualization. The scan data is transferred to the TPS in **DICOM** format.</li>
             <li><strong>Contouring:</strong> The physician and/or physicist manually delineate (draw) the target volumes (like Gross Tumor Volume - GTV, Clinical Target Volume - CTV, Planning Target Volume - PTV) and the Organs At Risk (OARs) on the 3D image set.</li>
@@ -94,6 +96,8 @@
     
     <div class="step">
         <h3>Beam and Geometry Setup</h3>
+                <img src="fig/Beam and Geometry Setup.png" width="500" height="500"> 
+
         <ul>
             <li><strong>Isocenter Placement:</strong> The central point of treatment (isocenter) is defined in 3D space, relative to the tumor.</li>
             <li><strong>Beam Arrangement:</strong> The physicist selects the number, angle, size, and type of radiation beams (photons, electrons, or protons) to be used. The Linac machine parameters (energy, collimator, gantry angles) are modeled precisely.</li>
@@ -102,6 +106,8 @@
     
     <div class="step">
         <h3>Dose Calculation and Modeling</h3>
+            <img src="fig/Dose Calculation and Modeling.png" width="500" height="350"> 
+
         <p>This is the core physics task, where the TPS models the complex interaction of radiation with heterogeneous tissue (bone, lung, soft tissue).</p>
         <ul>
             <li><strong>Dose Calculation Algorithms:</strong> Modern TPS use advanced algorithms:
